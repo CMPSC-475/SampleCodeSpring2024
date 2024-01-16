@@ -36,7 +36,7 @@ struct CheerTextView : View {
     var isVisible : Bool
     var body : some View {
             Text(title)
-            .opacity(isVisible ? 0 : 1)
+            .opacity(isVisible ? 1 : 0)
     }
 }
 

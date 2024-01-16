@@ -13,6 +13,7 @@
 		C37D4C5C2B50560600998483 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37D4C5B2B50560600998483 /* Preview Assets.xcassets */; };
 		C37D4C632B505EE600998483 /* MascotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4C622B505EE600998483 /* MascotView.swift */; };
 		C37D4C662B50629100998483 /* CheerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4C652B50629100998483 /* CheerManager.swift */; };
+		C37D4C792B56F9D200998483 /* Cheering.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4C782B56F9D200998483 /* Cheering.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C37D4C5B2B50560600998483 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C37D4C622B505EE600998483 /* MascotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotView.swift; sourceTree = "<group>"; };
 		C37D4C652B50629100998483 /* CheerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheerManager.swift; sourceTree = "<group>"; };
+		C37D4C782B56F9D200998483 /* Cheering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cheering.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 		C37D4C532B50560500998483 /* WeAre */ = {
 			isa = PBXGroup;
 			children = (
+				C37D4C772B56F7F100998483 /* Model */,
+				C37D4C762B56F7D500998483 /* ViewModel */,
 				C37D4C642B50626700998483 /* Views */,
 				C37D4C542B50560500998483 /* WeAreApp.swift */,
 				C37D4C582B50560600998483 /* Assets.xcassets */,
 				C37D4C5A2B50560600998483 /* Preview Content */,
-				C37D4C652B50629100998483 /* CheerManager.swift */,
 			);
 			path = WeAre;
 			sourceTree = "<group>";
@@ -79,6 +82,22 @@
 				C37D4C562B50560500998483 /* RootView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C37D4C762B56F7D500998483 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C37D4C652B50629100998483 /* CheerManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C37D4C772B56F7F100998483 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C37D4C782B56F9D200998483 /* Cheering.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +174,7 @@
 				C37D4C572B50560500998483 /* RootView.swift in Sources */,
 				C37D4C552B50560500998483 /* WeAreApp.swift in Sources */,
 				C37D4C662B50629100998483 /* CheerManager.swift in Sources */,
+				C37D4C792B56F9D200998483 /* Cheering.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
