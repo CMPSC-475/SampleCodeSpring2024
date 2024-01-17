@@ -27,8 +27,8 @@ struct CheerRound {
 
 struct PSUCheer : Cheering {
     var initialCheer: OneCheer = OneCheer(title: "", imageName: "Mascot 0")
-    var firstRound: CheerRound = CheerRound(count: 3, firstCheer: OneCheer(title: "We Are", imageName: "Mascot 1"), secondCheer: OneCheer(title: "Penn State", imageName: "Mascot 2"))
-    var secondRound: CheerRound = CheerRound(count: 1, firstCheer: OneCheer(title: "Thank You", imageName: "Mascot 1"), secondCheer: OneCheer(title: "You're Welcome", imageName: "Mascot 2"))
+    var firstRound: CheerRound = CheerRound(count: 3, firstCheer: OneCheer(title: "We Are", imageName: "Mascot 1"), secondCheer: OneCheer(title: "Penn State", imageName: "Mascot 1 Reversed"))
+    var secondRound: CheerRound = CheerRound(count: 1, firstCheer: OneCheer(title: "Thank You", imageName: "Mascot 2"), secondCheer: OneCheer(title: "You're Welcome", imageName: "Mascot 2 Reversed"))
 
 }
 
