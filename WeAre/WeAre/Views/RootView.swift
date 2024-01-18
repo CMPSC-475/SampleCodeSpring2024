@@ -8,23 +8,17 @@
 import SwiftUI
 
 struct RootView: View {
-    @StateObject var cheerManager : CheerManager = CheerManager()
+    @EnvironmentObject var cheerManager : CheerManager
     var body: some View {
         ZStack {
             Color.cyan
                 .ignoresSafeArea()
             VStack {
-                MascotView(imageName: "Mascot 0")
-                    
-                CheerTextView(title: "We Are", isVisible: cheerManager.isFirstCheerVisisble)
-                    
-                CheerTextView(title: "Penn State", isVisible: cheerManager.isSecondCheerVisible)
+                MascotView(imageName: cheerManager.currentCheer.imageName)
+                CheerTextView(title: cheerManager.currentCheer.title, isVisible: cheerManager.isFirstCheerVisisble)
+                CheerTextView(title: cheerManager.currentCheer.title, isVisible: cheerManager.isSecondCheerVisible)
+                CheerButtonView()
 
-                Button("Cheer") {
-                    cheerManager.cheer()
-                }
-                .tint(.red)
-                .buttonStyle(.borderedProminent)
             }
             .font(.title)
         }
@@ -35,8 +29,8 @@ struct CheerTextView : View {
     let title : String
     var isVisible : Bool
     var body : some View {
-            Text(title)
-            .opacity(isVisible ? 1 : 0)
+        Text(title)
+            .opacity(isVisible ? 1.0 : 0.0)
     }
 }
 
@@ -45,4 +39,5 @@ struct CheerTextView : View {
 
 #Preview {
     RootView()
+        .environmentObject(CheerManager())
 }

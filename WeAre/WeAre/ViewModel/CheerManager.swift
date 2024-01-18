@@ -15,6 +15,54 @@ class CheerManager : ObservableObject {
     var isFirstCheerVisisble : Bool {cheerState == .weare || cheerState == .thankyou}
     var isSecondCheerVisible : Bool {cheerState == .pennstate || cheerState == .yourwelcom}
     
+//    var cheerText : String {
+//        switch cheerState {
+//        case .ready:
+//            cheers.initialCheer.title
+//        case .weare:
+//            cheers.firstRound.firstCheer.title
+//        case .pennstate:
+//            cheers.firstRound.secondCheer.title
+//        case .thankyou:
+//            cheers.secondRound.firstCheer.title
+//        case .yourwelcom:
+//            cheers.secondRound.secondCheer.title
+//        }
+//    }
+//    
+//    var cheerImageName : String {
+//        switch cheerState {
+//        case .ready:
+//            cheers.initialCheer.imageName
+//        case .weare:
+//            cheers.firstRound.firstCheer.imageName
+//        case .pennstate:
+//            cheers.firstRound.secondCheer.imageName
+//        case .thankyou:
+//            cheers.secondRound.firstCheer.imageName
+//        case .yourwelcom:
+//            cheers.secondRound.secondCheer.imageName
+//        }
+//    
+//    }
+    
+    
+    var currentCheer : OneCheer {
+        switch cheerState {
+        case .ready:
+            cheers.initialCheer
+        case .weare:
+            cheers.firstRound.firstCheer
+        case .pennstate:
+            cheers.firstRound.secondCheer
+        case .thankyou:
+            cheers.secondRound.firstCheer
+        case .yourwelcom:
+            cheers.secondRound.secondCheer
+        }
+    }
+    
+    
     
     enum CheerState {
         case ready, weare, pennstate, thankyou, yourwelcom
@@ -36,7 +84,7 @@ class CheerManager : ObservableObject {
     }
     
     func cheer() {
-        cheerCount = (cheerCount + 1) % cheers.totalCheers
+            cheerCount = (cheerCount + 1) % cheers.totalCheers
     }
     
 }

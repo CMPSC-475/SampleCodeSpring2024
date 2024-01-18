@@ -11,9 +11,13 @@ struct MascotView: View {
     let imageName : String
     var body: some View {
         Image(imageName)
+
             .resizable()
-            .aspectRatio(contentMode: .fit)
             .border(Color.yellow, width: 10)
+            .aspectRatio(contentMode: .fit)
+            .frame(height: 350)
+
+
     }
 }
 
