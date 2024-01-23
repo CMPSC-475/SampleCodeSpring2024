@@ -14,6 +14,8 @@
 		C37D4CC02B5DCA5C00998483 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4CBF2B5DCA5C00998483 /* Diamond.swift */; };
 		C37D4CC22B5DCA8900998483 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4CC12B5DCA8900998483 /* Sector.swift */; };
 		C37D4CC52B5DCAEF00998483 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4CC42B5DCAEF00998483 /* Triangle.swift */; };
+		C3AB28692B6030FA00846A95 /* TicTacToeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB28682B6030FA00846A95 /* TicTacToeView.swift */; };
+		C3AB286B2B60525100846A95 /* StarBurstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB286A2B60525100846A95 /* StarBurstView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		C37D4CBF2B5DCA5C00998483 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 		C37D4CC12B5DCA8900998483 /* Sector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 		C37D4CC42B5DCAEF00998483 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		C3AB28682B6030FA00846A95 /* TicTacToeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeView.swift; sourceTree = "<group>"; };
+		C3AB286A2B60525100846A95 /* StarBurstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarBurstView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				C37D4CBF2B5DCA5C00998483 /* Diamond.swift */,
 				C37D4CC12B5DCA8900998483 /* Sector.swift */,
 				C37D4CC42B5DCAEF00998483 /* Triangle.swift */,
+				C3AB28682B6030FA00846A95 /* TicTacToeView.swift */,
+				C3AB286A2B60525100846A95 /* StarBurstView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,7 +162,9 @@
 			files = (
 				C37D4CC02B5DCA5C00998483 /* Diamond.swift in Sources */,
 				C37D4CB42B5DC9C700998483 /* ContentView.swift in Sources */,
+				C3AB286B2B60525100846A95 /* StarBurstView.swift in Sources */,
 				C37D4CC52B5DCAEF00998483 /* Triangle.swift in Sources */,
+				C3AB28692B6030FA00846A95 /* TicTacToeView.swift in Sources */,
 				C37D4CB22B5DC9C700998483 /* Shape_of_ThingsApp.swift in Sources */,
 				C37D4CC22B5DCA8900998483 /* Sector.swift in Sources */,
 			);
