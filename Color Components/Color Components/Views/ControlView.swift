@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ControlView: View {
     @EnvironmentObject var manager : ColorManager
+    @Binding var showPrefrences : Bool
     var body: some View {
         HStack {
             Spacer()
@@ -29,11 +30,18 @@ struct ControlView: View {
                 Image(systemName: "arrow.triangle.swap")
             }
             Spacer()
+            Button {
+                showPrefrences.toggle()
+            } label: {
+                Image(systemName: "gear")
+            }
+            Spacer()
+
         }
     }
 }
 
 #Preview {
-    ControlView()
+    ControlView(showPrefrences: .constant(true))
         .environmentObject(ColorManager())
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C328D7BA2B62D45500E2C844 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328D7B92B62D45500E2C844 /* Preferences.swift */; };
 		C37D4C8B2B5DC5E300998483 /* Color_ComponentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4C8A2B5DC5E300998483 /* Color_ComponentsApp.swift */; };
 		C37D4C8D2B5DC5E300998483 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4C8C2B5DC5E300998483 /* RootView.swift */; };
 		C37D4C8F2B5DC5E600998483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37D4C8E2B5DC5E600998483 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C328D7B92B62D45500E2C844 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		C37D4C872B5DC5E300998483 /* Color Components.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Components.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37D4C8A2B5DC5E300998483 /* Color_ComponentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_ComponentsApp.swift; sourceTree = "<group>"; };
 		C37D4C8C2B5DC5E300998483 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				C37D4CA32B5DC7FA00998483 /* ColorComponent.swift */,
+				C328D7B92B62D45500E2C844 /* Preferences.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				C37D4CA22B5DC7D700998483 /* Manager+Color.swift in Sources */,
 				C37D4C9E2B5DC75F00998483 /* ColorShapeView.swift in Sources */,
 				C37D4C8B2B5DC5E300998483 /* Color_ComponentsApp.swift in Sources */,
+				C328D7BA2B62D45500E2C844 /* Preferences.swift in Sources */,
 				C37D4CA42B5DC7FA00998483 /* ColorComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,8 @@ class ColorManager : ObservableObject {
 
     @Published var components : [ColorComponent] = []
     
+    @Published var preferences : Preferences = .rectangle
+    
     func addColor() {
         components.append(ColorComponent())
     }

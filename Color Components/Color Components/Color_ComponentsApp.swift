@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Color_ComponentsApp: App {
+    @StateObject var colorManager = ColorManager()
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environmentObject(colorManager)
         }
     }
 }
