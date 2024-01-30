@@ -9,8 +9,9 @@ import SwiftUI
 
 
 struct ControlView: View {
+    @Binding var showing : Showing?  // for triggering Root's sheet modifier
+
     @EnvironmentObject var manager : ColorManager
-    @Binding var showPrefrences : Bool
     var body: some View {
         HStack {
             Spacer()
@@ -25,23 +26,28 @@ struct ControlView: View {
             Button(action: {manager.clearColors()}) {
                 Image(systemName: "eraser")
             }
-            Spacer()
-            Button(action: {manager.invertColors()}) {
-                Image(systemName: "arrow.triangle.swap")
+            
+            Group {  // HStack can have at most 10 views so we use Group here
+                Spacer()
+                Button(action: {manager.invertColors()}) {
+                    Image(systemName: "arrow.triangle.swap")
+                }
+                Spacer()
+                Button(action:{showing = .blend}) {
+                    Image(systemName: "circle.hexagongrid.circle")
+                }
+                Spacer()
+                Button(action: {showing = .preferences}) {
+                    Image(systemName: "gear")
+                }
+                Spacer()
             }
-            Spacer()
-            Button {
-                showPrefrences.toggle()
-            } label: {
-                Image(systemName: "gear")
-            }
-            Spacer()
-
+            
         }
     }
 }
 
 #Preview {
-    ControlView(showPrefrences: .constant(true))
+    ControlView(showing: .constant(.blend))
         .environmentObject(ColorManager())
 }

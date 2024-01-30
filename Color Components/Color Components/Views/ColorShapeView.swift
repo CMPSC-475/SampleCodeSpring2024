@@ -11,16 +11,23 @@ struct ColorShapeView: View {
     @EnvironmentObject var manager : ColorManager
     @Binding var component: ColorComponent
     @State var showColorSheet : Bool = false
+    
     var body: some View {
         Button {
             showColorSheet.toggle()
         } label: {
-            switch manager.preferences {
+            switch manager.preferences.colorShape {
+            case .circle:
+                Circle()
+                    .fill(manager.colorForComponent(component))
             case .rectangle:
                 RoundedRectangle(cornerRadius: 10)
                     .fill(manager.colorForComponent(component))
-            case .circle:
-                Circle()
+            case .triangle:
+                Triangle()
+                    .fill(manager.colorForComponent(component))
+            case .diamond:
+                Diamond()
                     .fill(manager.colorForComponent(component))
             }
         }

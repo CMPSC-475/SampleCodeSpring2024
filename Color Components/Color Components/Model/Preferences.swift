@@ -7,8 +7,12 @@
 
 import Foundation
 
-enum Preferences: String, CaseIterable, Identifiable {
-    case rectangle, circle
+enum ColorShape: String, CaseIterable, Identifiable {
+    case rectangle, circle, triangle, diamond
     var id : RawValue {rawValue}
+}
+
+struct Preferences {
+    var colorShape : ColorShape = .rectangle
 }
 

@@ -7,9 +7,15 @@
 
 import SwiftUI
 
+enum Showing : String, Identifiable, CaseIterable {
+    case  preferences, blend
+    var id: RawValue { rawValue}
+}
+
 struct RootView: View {
     @EnvironmentObject var manager : ColorManager
-    @State private var showPrefrences = false
+//    @State private var showPrefrences = false
+    @State private var showing : Showing?
     var body: some View {
         VStack {
             
@@ -17,23 +23,15 @@ struct RootView: View {
                 ColorShapeView(component: $component)
             }
             Spacer()
-            ControlView(showPrefrences: $showPrefrences)
+            ControlView(showing: $showing)
         }
-        .sheet(isPresented: $showPrefrences, content: {
-            PreferenceView(prefrences: $manager.preferences)
-        })
-    }
-}
-
-struct PreferenceView : View {
-    @Binding var prefrences : Preferences
-    var body : some View {
-        Form {
-            Picker("Choose a shape", selection: $prefrences) {
-                ForEach(Preferences.allCases) {
-                    Text($0.rawValue)
-                        .tag($0)
-                }
+        .sheet(item: $showing, onDismiss: nil) {item in
+            
+            switch item  {
+            case .preferences:
+                PreferenceView(preferences: $manager.preferences)
+            case .blend:
+                BlendView(components: manager.components)
             }
         }
     }
