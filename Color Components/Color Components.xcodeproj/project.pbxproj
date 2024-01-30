@@ -12,6 +12,7 @@
 		C319E4A82B68492E00CAD519 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319E4A72B68492D00CAD519 /* Triangle.swift */; };
 		C319E4AA2B684A7500CAD519 /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319E4A92B684A7500CAD519 /* PreferenceView.swift */; };
 		C319E4AC2B684BC000CAD519 /* BlendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319E4AB2B684BC000CAD519 /* BlendView.swift */; };
+		C31B0DF72B6969500031C193 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B0DF62B6969500031C193 /* StorageManager.swift */; };
 		C328D7BA2B62D45500E2C844 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328D7B92B62D45500E2C844 /* Preferences.swift */; };
 		C37D4C8B2B5DC5E300998483 /* Color_ComponentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4C8A2B5DC5E300998483 /* Color_ComponentsApp.swift */; };
 		C37D4C8D2B5DC5E300998483 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D4C8C2B5DC5E300998483 /* RootView.swift */; };
@@ -30,6 +31,7 @@
 		C319E4A72B68492D00CAD519 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		C319E4A92B684A7500CAD519 /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
 		C319E4AB2B684BC000CAD519 /* BlendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendView.swift; sourceTree = "<group>"; };
+		C31B0DF62B6969500031C193 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		C328D7B92B62D45500E2C844 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		C37D4C872B5DC5E300998483 /* Color Components.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Components.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37D4C8A2B5DC5E300998483 /* Color_ComponentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_ComponentsApp.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				C37D4C9F2B5DC7B600998483 /* ColorManager.swift */,
 				C37D4CA12B5DC7D700998483 /* Manager+Color.swift */,
+				C31B0DF62B6969500031C193 /* StorageManager.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				C328D7BA2B62D45500E2C844 /* Preferences.swift in Sources */,
 				C37D4CA42B5DC7FA00998483 /* ColorComponent.swift in Sources */,
 				C319E4AA2B684A7500CAD519 /* PreferenceView.swift in Sources */,
+				C31B0DF72B6969500031C193 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ColorComponent : Identifiable {
+struct ColorComponent : Identifiable, Codable {
     var red : Double
     var green : Double
     var blue : Double
-    let id = UUID()
+    var id = UUID()
     static let standard  = ColorComponent(red: 0.6, green: 0.4, blue: 0.3)
 }
 

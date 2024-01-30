@@ -11,7 +11,14 @@ class ColorManager : ObservableObject {
 
     @Published var components : [ColorComponent] = []
     
+    let persistence : StorageManager = StorageManager<[ColorComponent]>()
+    
     @Published var preferences : Preferences = Preferences()
+    
+    init() {
+        components = persistence.modelData ?? []
+    }
+    
     
     func addColor() {
         components.append(ColorComponent())
@@ -30,6 +37,10 @@ class ColorManager : ObservableObject {
             c.invert
         }
         components = newComponents
+    }
+    
+    func save() {
+        persistence.save(components: components)
     }
     
 }
