@@ -18,10 +18,15 @@ struct Offset {
 }
  */
 
+
+
+
 struct Position : Hashable {
     var row : Int = 0
     var col : Int = 0
 }
+
+
 struct Piece : Identifiable {
 
     var position : Position

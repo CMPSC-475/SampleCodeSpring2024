@@ -18,7 +18,8 @@ struct BoardView: View {
                         let color = (r+c)%2==0 ? Color.gray : Color.black
                         Rectangle()
                             .fill(color)
-                            .aspectRatio(1, contentMode: .fit)
+                            .frame(width: CGFloat(manager.blockSize), height: CGFloat(manager.blockSize))
+//                            .aspectRatio(1, contentMode: .fit)
                         
                     }
                 }

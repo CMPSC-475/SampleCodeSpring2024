@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3241F8C2B6C0B69002A6547 /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3241F8B2B6C0B69002A6547 /* PieceView.swift */; };
 		C35412EF2B6AFC8400104B8C /* CheckersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35412EE2B6AFC8400104B8C /* CheckersApp.swift */; };
 		C35412F12B6AFC8400104B8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35412F02B6AFC8400104B8C /* ContentView.swift */; };
 		C35412F32B6AFC8600104B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35412F22B6AFC8600104B8C /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3241F8B2B6C0B69002A6547 /* PieceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceView.swift; sourceTree = "<group>"; };
 		C35412EB2B6AFC8400104B8C /* Checkers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checkers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35412EE2B6AFC8400104B8C /* CheckersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckersApp.swift; sourceTree = "<group>"; };
 		C35412F02B6AFC8400104B8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				C35413092B6AFD3700104B8C /* PreferenceView.swift */,
 				C354130B2B6AFD7900104B8C /* ControlView.swift */,
 				C354130D2B6AFE9A00104B8C /* BoardView.swift */,
+				C3241F8B2B6C0B69002A6547 /* PieceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				C35412EF2B6AFC8400104B8C /* CheckersApp.swift in Sources */,
 				C35413022B6AFCE900104B8C /* Perferences.swift in Sources */,
 				C35413062B6AFD1500104B8C /* GameManager+CG.swift in Sources */,
+				C3241F8C2B6C0B69002A6547 /* PieceView.swift in Sources */,
 				C35413002B6AFCD300104B8C /* Piece.swift in Sources */,
 				C35413042B6AFCFE00104B8C /* GameManager.swift in Sources */,
 				C354130E2B6AFE9A00104B8C /* BoardView.swift in Sources */,

@@ -15,7 +15,12 @@ struct GameView: View {
         VStack {
             ControlView(showPreference: $showPreference)
             Spacer()
-            BoardView()
+            ZStack(alignment: .topLeading) {
+                BoardView()
+                ForEach(manager.pieces) { piece in
+                        PieceView(piece: piece)
+                }
+            }
             Spacer()
         }
         .sheet(isPresented: $showPreference) {

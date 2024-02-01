@@ -8,6 +8,11 @@
 import Foundation
 
 extension GameManager {
-    
+  
+    func positionFor(_ piece: Piece) -> CGPoint {
+        let x = (CGFloat(piece.position.col) + 0.5) * CGFloat(blockSize)
+        let y = (CGFloat(piece.position.row) + 0.5) * CGFloat(blockSize)
+        return CGPoint(x: x, y: y)
+    }
     
 }

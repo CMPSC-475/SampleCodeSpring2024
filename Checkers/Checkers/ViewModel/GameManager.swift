@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+
 class GameManager : ObservableObject {
     
     @Published var preferences : Preferences
@@ -27,7 +29,12 @@ class GameManager : ObservableObject {
     }
     
     private func initializePieces() {
-
+        for i in 0..<preferences.boardDimension {
+            let homePiece = Piece(position: Position(row: 0, col: i), player: .home, number: i)
+            pieces.append(homePiece)
+            let awayPiece = Piece(position: Position(row: preferences.boardDimension-1, col: i), player: .away, number: i)
+            pieces.append(awayPiece)
+        }
     }
     
     private func resetPieces() {
