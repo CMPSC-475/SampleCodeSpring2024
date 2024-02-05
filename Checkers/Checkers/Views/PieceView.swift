@@ -10,26 +10,12 @@ import SwiftUI
 struct PieceView: View {
     @EnvironmentObject var manager : GameManager
     let piece : Piece
-    
-    @State var offset : CGSize = CGSize.zero
+    let pieceScaleFactor = 0.8
     var body: some View {
-        
-        let dimension = CGFloat(manager.blockSize) * 0.8
-        let dragGest = DragGesture()
-            .onChanged({ value in
-                offset = value.translation
-            })
-            .onEnded { _ in
-                offset = CGSize.zero
-            }
+        let dimension = CGFloat(manager.blockSize) * pieceScaleFactor
         Image(piece.player == .home ? "homePiece" : "awayPiece")
             .resizable()
-            .frame(width: dimension , height: dimension)
-            .position(manager.positionFor(piece))
-            .offset(offset)
-            .gesture(dragGest)
-            
-            
+            .frame(width:dimension,height: dimension)
     }
 }
 

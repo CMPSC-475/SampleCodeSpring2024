@@ -13,12 +13,13 @@ struct GameView: View {
     @State var showPreference = false
     var body: some View {
         VStack {
+            
             ControlView(showPreference: $showPreference)
             Spacer()
             ZStack(alignment: .topLeading) {
                 BoardView()
                 ForEach(manager.pieces) { piece in
-                        PieceView(piece: piece)
+                        CheckerView(piece: piece)
                 }
             }
             Spacer()

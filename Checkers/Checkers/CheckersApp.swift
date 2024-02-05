@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CheckersApp: App {
+    @StateObject var manager  = GameManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameView()
+                .environmentObject(manager)
         }
     }
 }

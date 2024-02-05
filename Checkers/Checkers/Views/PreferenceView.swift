@@ -19,6 +19,9 @@ struct PreferenceView: View {
                     ForEach(preferences.boardRange, id:\.self) {
                         Text("\($0)")
                     }
+                    .onChange(of: preferences.boardDimension) {
+                        dismiss()
+                    }
                 }.pickerStyle(.segmented)
             }
             Button("Dismiss") {

@@ -10,7 +10,7 @@ import SwiftUI
 struct BoardView: View {
     @EnvironmentObject var manager:GameManager
     var body: some View {
-
+        let dimension = CGFloat(manager.blockSize)
         VStack(spacing:0) {
             ForEach(0..<manager.boardSize, id:\.self) {r in
                 HStack(spacing:0) {
@@ -18,8 +18,7 @@ struct BoardView: View {
                         let color = (r+c)%2==0 ? Color.gray : Color.black
                         Rectangle()
                             .fill(color)
-                            .frame(width: CGFloat(manager.blockSize), height: CGFloat(manager.blockSize))
-//                            .aspectRatio(1, contentMode: .fit)
+                            .frame(width: CGFloat(dimension), height: CGFloat(dimension))
                         
                     }
                 }

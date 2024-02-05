@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30D55A82B71986E00DB8005 /* CheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D55A72B71986E00DB8005 /* CheckerView.swift */; };
 		C3241F8C2B6C0B69002A6547 /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3241F8B2B6C0B69002A6547 /* PieceView.swift */; };
 		C35412EF2B6AFC8400104B8C /* CheckersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35412EE2B6AFC8400104B8C /* CheckersApp.swift */; };
-		C35412F12B6AFC8400104B8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35412F02B6AFC8400104B8C /* ContentView.swift */; };
 		C35412F32B6AFC8600104B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35412F22B6AFC8600104B8C /* Assets.xcassets */; };
 		C35412F62B6AFC8600104B8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35412F52B6AFC8600104B8C /* Preview Assets.xcassets */; };
 		C35413002B6AFCD300104B8C /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35412FF2B6AFCD300104B8C /* Piece.swift */; };
@@ -23,10 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C30D55A72B71986E00DB8005 /* CheckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerView.swift; sourceTree = "<group>"; };
 		C3241F8B2B6C0B69002A6547 /* PieceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceView.swift; sourceTree = "<group>"; };
 		C35412EB2B6AFC8400104B8C /* Checkers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checkers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35412EE2B6AFC8400104B8C /* CheckersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckersApp.swift; sourceTree = "<group>"; };
-		C35412F02B6AFC8400104B8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C35412F22B6AFC8600104B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C35412F52B6AFC8600104B8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C35412FF2B6AFCD300104B8C /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
@@ -73,7 +73,6 @@
 				C35412FD2B6AFC8D00104B8C /* ViewModel */,
 				C35412FC2B6AFC8B00104B8C /* Views */,
 				C35412EE2B6AFC8400104B8C /* CheckersApp.swift */,
-				C35412F02B6AFC8400104B8C /* ContentView.swift */,
 				C35412F22B6AFC8600104B8C /* Assets.xcassets */,
 				C35412F42B6AFC8600104B8C /* Preview Content */,
 			);
@@ -96,6 +95,7 @@
 				C354130B2B6AFD7900104B8C /* ControlView.swift */,
 				C354130D2B6AFE9A00104B8C /* BoardView.swift */,
 				C3241F8B2B6C0B69002A6547 /* PieceView.swift */,
+				C30D55A72B71986E00DB8005 /* CheckerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,8 +188,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C35412F12B6AFC8400104B8C /* ContentView.swift in Sources */,
 				C354130A2B6AFD3700104B8C /* PreferenceView.swift in Sources */,
+				C30D55A82B71986E00DB8005 /* CheckerView.swift in Sources */,
 				C35412EF2B6AFC8400104B8C /* CheckersApp.swift in Sources */,
 				C35413022B6AFCE900104B8C /* Perferences.swift in Sources */,
 				C35413062B6AFD1500104B8C /* GameManager+CG.swift in Sources */,

@@ -10,7 +10,14 @@ import Foundation
 
 class GameManager : ObservableObject {
     
-    @Published var preferences : Preferences
+    // our Model consists of the preferences, the block size of the game board, and the array of game pieces
+    @Published var preferences : Preferences {
+        didSet {
+            // preference change means we changed the board dimension so we need to reset block size
+            blockSize = boardWidth/boardSize
+            initializePieces()
+        }
+    }
 
     
     @Published var blockSize = 80
@@ -19,6 +26,13 @@ class GameManager : ObservableObject {
     var boardSize : Int {preferences.boardDimension}
     
  
+    // the width (in points) of the board. used to determine the blocksize and size of game pieces.  A Geometry Reader in the main app provides this value
+    private var boardWidth : Int = 0 {
+        didSet {
+            // boardWidth change means we need to change blocksize
+            blockSize =  boardWidth/boardSize
+        }
+    }
     
     // initialize preferences and pieces model
     init() {
@@ -46,5 +60,10 @@ class GameManager : ObservableObject {
     // Intents
     func resetGame() {
         resetPieces()
+    }
+    
+    // size of window from main app Geometry Window
+    func setBoardWidth(_ width:Int) {
+        boardWidth = width
     }
 }
