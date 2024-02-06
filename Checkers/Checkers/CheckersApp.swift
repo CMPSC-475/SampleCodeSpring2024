@@ -12,8 +12,13 @@ struct CheckersApp: App {
     @StateObject var manager  = GameManager()
     var body: some Scene {
         WindowGroup {
-            GameView()
-                .environmentObject(manager)
+            GeometryReader { proxy in
+                GameView()
+                    .environmentObject(manager)
+                    .onAppear {
+                        manager.setBoardWidth(Int(min(proxy.size.width, proxy.size.height)))
+                    }
+            }
         }
     }
 }

@@ -18,8 +18,8 @@ struct GameView: View {
             Spacer()
             ZStack(alignment: .topLeading) {
                 BoardView()
-                ForEach(manager.pieces) { piece in
-                        CheckerView(piece: piece)
+                ForEach($manager.pieces) { $piece in
+                        CheckerView(piece: $piece)
                 }
             }
             Spacer()

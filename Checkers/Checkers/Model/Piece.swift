@@ -11,17 +11,25 @@ enum Player {
     case home, away
 }
 
-/*
+
 struct Offset {
     let x : Int
     let y : Int
+    
+    static func +(lhs: Position, rhs: Offset) -> Position {
+        Position(row: lhs.row + rhs.y, col: lhs.col + rhs.x)
+    }
 }
- */
 
 
 struct Position : Hashable {
     var row : Int = 0
     var col : Int = 0
+    
+    static func +(rhs: Offset, lhs: Position) -> Position {
+        Position(row: lhs.row + rhs.y, col: lhs.col + rhs.x)
+    }
+    
 }
 
 
@@ -33,5 +41,20 @@ struct Piece : Identifiable {
     var id = UUID()  //: Int {hashValue}
     
     static let standard = Piece(position: Position(), player: .home, number: 1)
+    
+}
+
+
+extension Piece {
+    
+    mutating func moveBy(offset: Offset) {
+        position = position + offset
+    }
+    
+    mutating func to(_ position: Position) {
+        self.position = position
+    }
+    
+    
     
 }

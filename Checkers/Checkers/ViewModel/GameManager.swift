@@ -43,6 +43,7 @@ class GameManager : ObservableObject {
     }
     
     private func initializePieces() {
+        pieces.removeAll()
         for i in 0..<preferences.boardDimension {
             let homePiece = Piece(position: Position(row: 0, col: i), player: .home, number: i)
             pieces.append(homePiece)
@@ -53,7 +54,7 @@ class GameManager : ObservableObject {
     
     private func resetPieces() {
         //put pieces back into their initial position
-
+        
     }
     
     

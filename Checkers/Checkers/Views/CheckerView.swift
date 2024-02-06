@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CheckerView: View {
     @EnvironmentObject var manager : GameManager
-    let piece : Piece
+    @Binding var piece : Piece
     @State private var offset = CGSize.zero
 
     var body: some View {
@@ -18,7 +18,11 @@ struct CheckerView: View {
                 offset = value.translation
             }
             .onEnded { (value) in
-                offset = CGSize.zero
+                withAnimation {
+                    let offset = manager.offset(for: piece, from: offset)
+                    piece.moveBy(offset: offset)
+                    self.offset = CGSize.zero
+                }
             }
         
        PieceView(piece: piece)
@@ -29,6 +33,6 @@ struct CheckerView: View {
 }
 
 #Preview {
-    CheckerView(piece: Piece.standard)
+    CheckerView(piece: .constant(Piece.standard))
         .environmentObject(GameManager())
 }
