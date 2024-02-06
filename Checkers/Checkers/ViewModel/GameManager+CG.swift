@@ -15,4 +15,19 @@ extension GameManager {
         return CGPoint(x: x, y: y)
     }
     
+    
+//    // Convert from view's CGSize to Model's Size
+//    private func offset( for size:CGSize) -> Offset {
+//        //TODO: -    }
+//    
+//    // home team moves y = +1, x = -1,0,1;
+//    // away team moves y = -1, x = -1,0,1
+//    func legal(_ offset:Offset, for player:Player) -> Bool {
+//        //TODO: -
+//    }
+//
+//    func offset(for piece:Piece, from size:CGSize) -> Offset {
+//        //TODO: -
+//    }
+    
 }
