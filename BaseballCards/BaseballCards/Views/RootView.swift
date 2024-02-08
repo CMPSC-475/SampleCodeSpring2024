@@ -11,13 +11,17 @@ struct RootView: View {
     @EnvironmentObject var manager : Manager
     var body: some View {
         VStack {
-            
+            ZStack {
+                ForEach($manager.cards) { $card in
+                    BaseballCardView(card: $card)
+                }
+            }
             HStack {
-                Score(title: "Traded", count: 0)
+                Score(title: "Traded", count: manager.tradedCount)
                 Spacer()
-                Button("Reset") {}
+                Button("Reset") {manager.reset()}
                 Spacer()
-                Score(title: "Kept", count: 0)
+                Score(title: "Kept", count: manager.keptCount)
             }
             .padding()
         }

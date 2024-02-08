@@ -12,7 +12,13 @@ enum Status {
 }
 
 struct CardInfo :Identifiable {
-    let id : Int
+    var id : Int { imageNumber }
+    let imageNumber : Int
     var status : Status
-    static let standard = CardInfo(id: 101, status: .unDecided)
+
+    static let standard = CardInfo(imageNumber: 101, status: .unDecided)
+    
+    mutating func updateStatus(_ status: Status) {
+        self.status = status
+    }
 }
