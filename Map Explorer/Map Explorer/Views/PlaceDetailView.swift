@@ -9,12 +9,13 @@ import SwiftUI
 
 struct PlaceDetailView: View {
     @EnvironmentObject var manager : Manager
+    var place : Favorite
     var body: some View {
         
             VStack(alignment:.leading) {
                 HStack(alignment: .top) {
                     VStack(alignment:.leading) {
-                        Text("Name Here").font(.title)
+                        Text(place.title).font(.title)
                         HStack {
                             Text("Point of Interest")
                             Text("·")
@@ -31,8 +32,8 @@ struct PlaceDetailView: View {
     }
 }
 
-#Preview {
-    PlaceDetailView()
-        .environmentObject(Manager())
-}
+//#Preview {
+//    PlaceDetailView()
+//        .environmentObject(Manager())
+//}
 
