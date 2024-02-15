@@ -20,27 +20,40 @@ extension CLLocationCoordinate2D {
 struct MainView: View {
     @EnvironmentObject var manager : Manager
     
-    @State private var camera : MapCameraPosition = .automatic
+//    @State private var camera : MapCameraPosition = .automatic
     
     @State var selectedFavorite : Favorite?
 
     var body: some View {
         
-        Map(position: $camera) {
+        Map(position: $manager.camera) {
             //favoriteMarkers
             if manager.isShowingFavorites {
                 favoriteAnnotations
             }
+            
+            places
+        
         }
-        .onAppear {
-            camera = .region(MKCoordinateRegion(center: .stateCollege, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)))
+        .onMapCameraChange{ context in
+            manager.region = context.region
         }
+        .mapControls{
+            MapCompass()
+            MapPitchToggle()
+        }
+        .mapStyle(.standard(pointsOfInterest: [.bank]))
         .safeAreaInset(edge: .top) {
-            MapTopControls()
+            ZStack {
+                Color.white
+                MapTopControls()
+            }
+            .frame(height: 50)
 
         }
         .sheet(item: $selectedFavorite) { selectedFav in
             PlaceDetailView(place: selectedFav)
+                .presentationDetents([.fraction(0.3)])
         }
 
     }
@@ -70,6 +83,15 @@ extension MainView {
                 }
 
             }
+        }
+        
+    }
+    
+    var places : some MapContent {
+        ForEach(manager.places) {
+            place in
+            Marker(place.name, systemImage: place.category.systemName, coordinate: place.coordinate)
+                .tag(place)
         }
         
     }

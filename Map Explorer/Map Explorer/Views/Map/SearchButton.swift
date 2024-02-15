@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct SearchButton: View {
+    @EnvironmentObject var manager : Manager
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Menu("Categories") {
+            ForEach(Category.allCases, id:\.self) { category in
+                Button {
+                    manager.searchFor(category)
+                } label: {
+                    Text(category.rawValue.capitalized)
+                }
+
+            }
+        }
     }
 }
 
 #Preview {
     SearchButton()
+        .environmentObject(Manager())
 }
