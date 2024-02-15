@@ -25,8 +25,6 @@ struct MainView: View {
     @State var selectedFavorite : Favorite?
 
     var body: some View {
-        //Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-//        Map(initialPosition: .item(MKMapItem(placemark: MKPlacemark(coordinate: .stateCollege))))
         
         Map(position: $camera) {
             //favoriteMarkers
@@ -37,12 +35,8 @@ struct MainView: View {
         .onAppear {
             camera = .region(MKCoordinateRegion(center: .stateCollege, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)))
         }
-        .safeAreaInset(edge: .bottom) {
-            Button {
-                manager.toggleFavorites()
-            } label: {
-                Image(systemName: manager.isShowingFavorites ? "star.fill" : "star")
-            }
+        .safeAreaInset(edge: .top) {
+            MapTopControls()
 
         }
         .sheet(item: $selectedFavorite) { selectedFav in

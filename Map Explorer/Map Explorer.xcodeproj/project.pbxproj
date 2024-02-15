@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C33315062B7E3B1D00516138 /* MapTopControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315052B7E3B1D00516138 /* MapTopControls.swift */; };
+		C33315082B7E3B6200516138 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315072B7E3B6200516138 /* SearchButton.swift */; };
+		C333150A2B7E3B7300516138 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315092B7E3B7300516138 /* Place.swift */; };
 		C3A5EB2B2B7A716300C7E7E2 /* Map_ExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5EB2A2B7A716300C7E7E2 /* Map_ExplorerApp.swift */; };
 		C3A5EB2D2B7A716300C7E7E2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */; };
 		C3A5EB2F2B7A716500C7E7E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A5EB2E2B7A716500C7E7E2 /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C33315052B7E3B1D00516138 /* MapTopControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTopControls.swift; sourceTree = "<group>"; };
+		C33315072B7E3B6200516138 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
+		C33315092B7E3B7300516138 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		C3A5EB272B7A716300C7E7E2 /* Map Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A5EB2A2B7A716300C7E7E2 /* Map_ExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_ExplorerApp.swift; sourceTree = "<group>"; };
 		C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -46,6 +52,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C33315032B7E3A4A00516138 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */,
+				C33315052B7E3B1D00516138 /* MapTopControls.swift */,
+				C33315072B7E3B6200516138 /* SearchButton.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		C33315042B7E3AE900516138 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				C3A5EB412B7A72A300C7E7E2 /* PlaceDetailView.swift */,
+				C3A5EB452B7A72DF00C7E7E2 /* ActionButton.swift */,
+				C3A5EB432B7A72BD00C7E7E2 /* ButtonRowView.swift */,
+				C3A5EB472B7A730500C7E7E2 /* ControlButtons.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
 		C3A5EB1E2B7A716200C7E7E2 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +115,7 @@
 			children = (
 				C3A5EB3D2B7A727000C7E7E2 /* Category.swift */,
 				C3A5EB3F2B7A728400C7E7E2 /* Favorite.swift */,
+				C33315092B7E3B7300516138 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,11 +131,8 @@
 		C3A5EB3A2B7A718A00C7E7E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */,
-				C3A5EB412B7A72A300C7E7E2 /* PlaceDetailView.swift */,
-				C3A5EB432B7A72BD00C7E7E2 /* ButtonRowView.swift */,
-				C3A5EB452B7A72DF00C7E7E2 /* ActionButton.swift */,
-				C3A5EB472B7A730500C7E7E2 /* ControlButtons.swift */,
+				C33315042B7E3AE900516138 /* DetailView */,
+				C33315032B7E3A4A00516138 /* Map */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,11 +210,14 @@
 				C3A5EB442B7A72BD00C7E7E2 /* ButtonRowView.swift in Sources */,
 				C3A5EB402B7A728400C7E7E2 /* Favorite.swift in Sources */,
 				C3A5EB422B7A72A300C7E7E2 /* PlaceDetailView.swift in Sources */,
+				C333150A2B7E3B7300516138 /* Place.swift in Sources */,
 				C3A5EB2D2B7A716300C7E7E2 /* MainView.swift in Sources */,
 				C3A5EB3C2B7A71E200C7E7E2 /* Manager.swift in Sources */,
 				C3A5EB2B2B7A716300C7E7E2 /* Map_ExplorerApp.swift in Sources */,
 				C3A5EB3E2B7A727000C7E7E2 /* Category.swift in Sources */,
+				C33315082B7E3B6200516138 /* SearchButton.swift in Sources */,
 				C3A5EB462B7A72DF00C7E7E2 /* ActionButton.swift in Sources */,
+				C33315062B7E3B1D00516138 /* MapTopControls.swift in Sources */,
 				C3A5EB482B7A730500C7E7E2 /* ControlButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
