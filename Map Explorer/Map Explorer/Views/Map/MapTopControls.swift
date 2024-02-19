@@ -14,10 +14,16 @@ struct MapTopControls: View {
         HStack(spacing:20) {
             Button(action: {manager.toggleFavorites()}) {
                 Image(systemName: manager.isShowingFavorites ? "star.fill" : "star")
-            }.padding([.leading])
+            }
             SearchButton()
+            ZoomPlaceButton()
+            DiningButton()
+            MapInteractionButton()
+            GeocodeButton().padding(.trailing)
             Spacer()
+            ClearButton()
         }
+        .padding(.horizontal)
     }
 }
 

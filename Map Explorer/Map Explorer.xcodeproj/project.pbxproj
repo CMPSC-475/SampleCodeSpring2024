@@ -10,6 +10,17 @@
 		C33315062B7E3B1D00516138 /* MapTopControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315052B7E3B1D00516138 /* MapTopControls.swift */; };
 		C33315082B7E3B6200516138 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315072B7E3B6200516138 /* SearchButton.swift */; };
 		C333150A2B7E3B7300516138 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315092B7E3B7300516138 /* Place.swift */; };
+		C38E88672B83B9DD0092B9FA /* Manager+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88662B83B9DD0092B9FA /* Manager+Search.swift */; };
+		C38E88692B83BA2C0092B9FA /* Manager+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88682B83BA2C0092B9FA /* Manager+Location.swift */; };
+		C38E886B2B83BA5B0092B9FA /* Manager+Geocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E886A2B83BA5B0092B9FA /* Manager+Geocoding.swift */; };
+		C38E886D2B83BA920092B9FA /* Manager+Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E886C2B83BA920092B9FA /* Manager+Details.swift */; };
+		C38E886F2B83BAAC0092B9FA /* Manager+Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E886E2B83BAAC0092B9FA /* Manager+Directions.swift */; };
+		C38E88712B83BAED0092B9FA /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88702B83BAED0092B9FA /* Restaurant.swift */; };
+		C38E88782B83FFA60092B9FA /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88772B83FFA60092B9FA /* ClearButton.swift */; };
+		C38E887A2B83FFB70092B9FA /* MapInteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88792B83FFB70092B9FA /* MapInteractionButton.swift */; };
+		C38E887C2B83FFCC0092B9FA /* GeocodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E887B2B83FFCC0092B9FA /* GeocodeButton.swift */; };
+		C38E887E2B83FFDF0092B9FA /* DiningButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E887D2B83FFDF0092B9FA /* DiningButton.swift */; };
+		C38E88802B83FFEE0092B9FA /* ZoomPlaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E887F2B83FFEE0092B9FA /* ZoomPlaceButton.swift */; };
 		C3A5EB2B2B7A716300C7E7E2 /* Map_ExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5EB2A2B7A716300C7E7E2 /* Map_ExplorerApp.swift */; };
 		C3A5EB2D2B7A716300C7E7E2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */; };
 		C3A5EB2F2B7A716500C7E7E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A5EB2E2B7A716500C7E7E2 /* Assets.xcassets */; };
@@ -27,6 +38,20 @@
 		C33315052B7E3B1D00516138 /* MapTopControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTopControls.swift; sourceTree = "<group>"; };
 		C33315072B7E3B6200516138 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		C33315092B7E3B7300516138 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		C38E88662B83B9DD0092B9FA /* Manager+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Search.swift"; sourceTree = "<group>"; };
+		C38E88682B83BA2C0092B9FA /* Manager+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Location.swift"; sourceTree = "<group>"; };
+		C38E886A2B83BA5B0092B9FA /* Manager+Geocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Geocoding.swift"; sourceTree = "<group>"; };
+		C38E886C2B83BA920092B9FA /* Manager+Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Details.swift"; sourceTree = "<group>"; };
+		C38E886E2B83BAAC0092B9FA /* Manager+Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Directions.swift"; sourceTree = "<group>"; };
+		C38E88702B83BAED0092B9FA /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		C38E88722B83BB120092B9FA /* Restaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Restaurants.json; sourceTree = "<group>"; };
+		C38E88742B83BB4B0092B9FA /* SCWalk.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SCWalk.gpx; sourceTree = "<group>"; };
+		C38E88752B83BB6B0092B9FA /* W209Westgate.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = W209Westgate.gpx; sourceTree = "<group>"; };
+		C38E88772B83FFA60092B9FA /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
+		C38E88792B83FFB70092B9FA /* MapInteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractionButton.swift; sourceTree = "<group>"; };
+		C38E887B2B83FFCC0092B9FA /* GeocodeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeButton.swift; sourceTree = "<group>"; };
+		C38E887D2B83FFDF0092B9FA /* DiningButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningButton.swift; sourceTree = "<group>"; };
+		C38E887F2B83FFEE0092B9FA /* ZoomPlaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomPlaceButton.swift; sourceTree = "<group>"; };
 		C3A5EB272B7A716300C7E7E2 /* Map Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A5EB2A2B7A716300C7E7E2 /* Map_ExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_ExplorerApp.swift; sourceTree = "<group>"; };
 		C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -55,9 +80,9 @@
 		C33315032B7E3A4A00516138 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				C38E88762B83FF880092B9FA /* Map Buttons */,
 				C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */,
 				C33315052B7E3B1D00516138 /* MapTopControls.swift */,
-				C33315072B7E3B6200516138 /* SearchButton.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -71,6 +96,28 @@
 				C3A5EB472B7A730500C7E7E2 /* ControlButtons.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		C38E88732B83BB390092B9FA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C38E88742B83BB4B0092B9FA /* SCWalk.gpx */,
+				C38E88752B83BB6B0092B9FA /* W209Westgate.gpx */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C38E88762B83FF880092B9FA /* Map Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				C33315072B7E3B6200516138 /* SearchButton.swift */,
+				C38E88772B83FFA60092B9FA /* ClearButton.swift */,
+				C38E88792B83FFB70092B9FA /* MapInteractionButton.swift */,
+				C38E887B2B83FFCC0092B9FA /* GeocodeButton.swift */,
+				C38E887D2B83FFDF0092B9FA /* DiningButton.swift */,
+				C38E887F2B83FFEE0092B9FA /* ZoomPlaceButton.swift */,
+			);
+			path = "Map Buttons";
 			sourceTree = "<group>";
 		};
 		C3A5EB1E2B7A716200C7E7E2 = {
@@ -92,6 +139,7 @@
 		C3A5EB292B7A716300C7E7E2 /* Map Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				C38E88732B83BB390092B9FA /* Utils */,
 				C3A5EB382B7A717400C7E7E2 /* Model */,
 				C3A5EB392B7A717E00C7E7E2 /* View Model */,
 				C3A5EB3A2B7A718A00C7E7E2 /* Views */,
@@ -116,6 +164,8 @@
 				C3A5EB3D2B7A727000C7E7E2 /* Category.swift */,
 				C3A5EB3F2B7A728400C7E7E2 /* Favorite.swift */,
 				C33315092B7E3B7300516138 /* Place.swift */,
+				C38E88702B83BAED0092B9FA /* Restaurant.swift */,
+				C38E88722B83BB120092B9FA /* Restaurants.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +174,11 @@
 			isa = PBXGroup;
 			children = (
 				C3A5EB3B2B7A71E200C7E7E2 /* Manager.swift */,
+				C38E88662B83B9DD0092B9FA /* Manager+Search.swift */,
+				C38E88682B83BA2C0092B9FA /* Manager+Location.swift */,
+				C38E886A2B83BA5B0092B9FA /* Manager+Geocoding.swift */,
+				C38E886C2B83BA920092B9FA /* Manager+Details.swift */,
+				C38E886E2B83BAAC0092B9FA /* Manager+Directions.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -207,18 +262,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38E886B2B83BA5B0092B9FA /* Manager+Geocoding.swift in Sources */,
+				C38E88692B83BA2C0092B9FA /* Manager+Location.swift in Sources */,
 				C3A5EB442B7A72BD00C7E7E2 /* ButtonRowView.swift in Sources */,
+				C38E88802B83FFEE0092B9FA /* ZoomPlaceButton.swift in Sources */,
+				C38E887C2B83FFCC0092B9FA /* GeocodeButton.swift in Sources */,
 				C3A5EB402B7A728400C7E7E2 /* Favorite.swift in Sources */,
 				C3A5EB422B7A72A300C7E7E2 /* PlaceDetailView.swift in Sources */,
 				C333150A2B7E3B7300516138 /* Place.swift in Sources */,
 				C3A5EB2D2B7A716300C7E7E2 /* MainView.swift in Sources */,
 				C3A5EB3C2B7A71E200C7E7E2 /* Manager.swift in Sources */,
+				C38E88712B83BAED0092B9FA /* Restaurant.swift in Sources */,
 				C3A5EB2B2B7A716300C7E7E2 /* Map_ExplorerApp.swift in Sources */,
 				C3A5EB3E2B7A727000C7E7E2 /* Category.swift in Sources */,
+				C38E887A2B83FFB70092B9FA /* MapInteractionButton.swift in Sources */,
+				C38E88672B83B9DD0092B9FA /* Manager+Search.swift in Sources */,
 				C33315082B7E3B6200516138 /* SearchButton.swift in Sources */,
+				C38E886D2B83BA920092B9FA /* Manager+Details.swift in Sources */,
+				C38E88782B83FFA60092B9FA /* ClearButton.swift in Sources */,
 				C3A5EB462B7A72DF00C7E7E2 /* ActionButton.swift in Sources */,
 				C33315062B7E3B1D00516138 /* MapTopControls.swift in Sources */,
 				C3A5EB482B7A730500C7E7E2 /* ControlButtons.swift in Sources */,
+				C38E887E2B83FFDF0092B9FA /* DiningButton.swift in Sources */,
+				C38E886F2B83BAAC0092B9FA /* Manager+Directions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

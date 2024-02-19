@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchButton: View {
     @EnvironmentObject var manager : Manager
     var body: some View {
-        Menu("Categories") {
+        Menu {
             ForEach(Category.allCases, id:\.self) { category in
                 Button {
                     manager.searchFor(category)
@@ -19,6 +19,8 @@ struct SearchButton: View {
                 }
 
             }
+        } label: {
+            Image(systemName: "magnifyingglass")
         }
     }
 }

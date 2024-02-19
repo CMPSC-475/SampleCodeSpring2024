@@ -20,13 +20,13 @@ extension CLLocationCoordinate2D {
 struct MainView: View {
     @EnvironmentObject var manager : Manager
     
-//    @State private var camera : MapCameraPosition = .automatic
+    @State private var camera : MapCameraPosition = .automatic
     
     @State var selectedFavorite : Favorite?
 
     var body: some View {
         
-        Map(position: $manager.camera) {
+        Map(position: $camera) {
             //favoriteMarkers
             if manager.isShowingFavorites {
                 favoriteAnnotations
@@ -38,10 +38,10 @@ struct MainView: View {
         .onMapCameraChange{ context in
             manager.region = context.region
         }
-        .mapControls{
-            MapCompass()
-            MapPitchToggle()
-        }
+//        .mapControls{
+//            MapCompass()
+//            MapPitchToggle()
+//        }
         .mapStyle(.standard(pointsOfInterest: [.bank]))
         .safeAreaInset(edge: .top) {
             ZStack {
@@ -49,6 +49,8 @@ struct MainView: View {
                 MapTopControls()
             }
             .frame(height: 50)
+            .padding()
+            .shadow(radius: 20)
 
         }
         .sheet(item: $selectedFavorite) { selectedFav in
