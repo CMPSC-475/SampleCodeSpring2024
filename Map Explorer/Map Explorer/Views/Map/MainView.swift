@@ -20,7 +20,10 @@ struct MainView: View {
             .sheet(item: $selectedPlace) { selectedPlace in
             PlaceDetailView(place: selectedPlace)
                 .presentationDetents([.fraction(0.3)])
-        }
+            }
+            .alert("User's Location", isPresented: $manager.showAlert, actions: {}) {
+                Text(manager.userLocationDescription ?? "No Location Found")
+            }
 
     }
 }

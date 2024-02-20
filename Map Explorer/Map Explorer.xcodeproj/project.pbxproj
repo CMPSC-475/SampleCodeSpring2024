@@ -10,6 +10,7 @@
 		C33315062B7E3B1D00516138 /* MapTopControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315052B7E3B1D00516138 /* MapTopControls.swift */; };
 		C33315082B7E3B6200516138 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315072B7E3B6200516138 /* SearchButton.swift */; };
 		C333150A2B7E3B7300516138 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315092B7E3B7300516138 /* Place.swift */; };
+		C38C99B22B8519DA001505DD /* Restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = C38E88722B83BB120092B9FA /* Restaurants.json */; };
 		C38E88672B83B9DD0092B9FA /* Manager+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88662B83B9DD0092B9FA /* Manager+Search.swift */; };
 		C38E88692B83BA2C0092B9FA /* Manager+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88682B83BA2C0092B9FA /* Manager+Location.swift */; };
 		C38E886B2B83BA5B0092B9FA /* Manager+Geocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E886A2B83BA5B0092B9FA /* Manager+Geocoding.swift */; };
@@ -256,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38C99B22B8519DA001505DD /* Restaurants.json in Resources */,
 				C3A5EB322B7A716500C7E7E2 /* Preview Assets.xcassets in Resources */,
 				C3A5EB2F2B7A716500C7E7E2 /* Assets.xcassets in Resources */,
 			);
@@ -429,6 +431,7 @@
 				DEVELOPMENT_TEAM = JP74RZ3MMY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WE WANT TO TRACK YOU!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,6 +461,7 @@
 				DEVELOPMENT_TEAM = JP74RZ3MMY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WE WANT TO TRACK YOU!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

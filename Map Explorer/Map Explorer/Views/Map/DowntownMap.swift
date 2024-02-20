@@ -22,6 +22,8 @@ struct DowntownMap: View {
             }
             
             places
+            
+            UserAnnotation()
         
         }
         .onMapCameraChange{ context in
@@ -35,7 +37,7 @@ struct DowntownMap: View {
         .safeAreaInset(edge: .top) {
             ZStack {
                 Color.white
-                MapTopControls()
+                MapTopControls(position: $camera)
             }
             .frame(height: 50)
             .padding()

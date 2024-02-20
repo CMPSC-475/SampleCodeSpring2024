@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MapTopControls: View {
     @EnvironmentObject var manager : Manager
+    
+    @Binding var position : MapCameraPosition
 
     var body: some View {
         HStack(spacing:20) {
@@ -16,7 +19,7 @@ struct MapTopControls: View {
                 Image(systemName: manager.isShowingFavorites ? "star.fill" : "star")
             }
             SearchButton()
-            ZoomPlaceButton()
+            ZoomPlaceButton(position: $position)
             DiningButton()
             MapInteractionButton()
             GeocodeButton().padding(.trailing)
@@ -28,6 +31,6 @@ struct MapTopControls: View {
 }
 
 #Preview {
-    MapTopControls()
+    MapTopControls(position: .constant(.automatic))
         .environmentObject(Manager())
 }

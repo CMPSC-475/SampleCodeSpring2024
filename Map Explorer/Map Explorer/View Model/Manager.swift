@@ -9,7 +9,7 @@ import Foundation
 import MapKit
 import SwiftUI
 
-class Manager : ObservableObject {
+class Manager : NSObject, ObservableObject {
     
     //MARK: - Annotation Support -
     @Published var favorites = [Favorite(coord: Coord(latitude: 40.79550030, longitude: -77.85900170), title: "Cheese Shoppe"),
@@ -24,6 +24,20 @@ class Manager : ObservableObject {
     @Published var camera : MapCameraPosition = .region(MKCoordinateRegion(center: .stateCollege, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)))
     
     @Published var region = MKCoordinateRegion(center: .stateCollege, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+    
+    let locationManager : CLLocationManager
+    
+    
+    @Published var userLocationDescription : String?
+    @Published var showAlert : Bool = false
+    
+    override init() {
+        locationManager = CLLocationManager()
+        super.init()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+        
+    }
     
     func toggleFavorites() {
         isShowingFavorites.toggle()

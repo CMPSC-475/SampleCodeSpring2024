@@ -10,9 +10,18 @@ import CoreLocation
 
 // Manager will be Locationmanager's delegate
 // TODO: Conform to CLLocationManagerDelegate
-extension Manager {
+extension Manager : CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+        case .authorizedAlways, .authorizedWhenInUse:
+            manager.startUpdatingLocation()
+        default:
+            manager.stopUpdatingLocation()
+        }
+        
     }
     
     
@@ -23,4 +32,5 @@ extension Manager {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
+    
 }
