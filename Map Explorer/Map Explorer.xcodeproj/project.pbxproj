@@ -13,7 +13,6 @@
 		C38E88672B83B9DD0092B9FA /* Manager+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88662B83B9DD0092B9FA /* Manager+Search.swift */; };
 		C38E88692B83BA2C0092B9FA /* Manager+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88682B83BA2C0092B9FA /* Manager+Location.swift */; };
 		C38E886B2B83BA5B0092B9FA /* Manager+Geocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E886A2B83BA5B0092B9FA /* Manager+Geocoding.swift */; };
-		C38E886D2B83BA920092B9FA /* Manager+Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E886C2B83BA920092B9FA /* Manager+Details.swift */; };
 		C38E886F2B83BAAC0092B9FA /* Manager+Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E886E2B83BAAC0092B9FA /* Manager+Directions.swift */; };
 		C38E88712B83BAED0092B9FA /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88702B83BAED0092B9FA /* Restaurant.swift */; };
 		C38E88782B83FFA60092B9FA /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88772B83FFA60092B9FA /* ClearButton.swift */; };
@@ -41,7 +40,6 @@
 		C38E88662B83B9DD0092B9FA /* Manager+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Search.swift"; sourceTree = "<group>"; };
 		C38E88682B83BA2C0092B9FA /* Manager+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Location.swift"; sourceTree = "<group>"; };
 		C38E886A2B83BA5B0092B9FA /* Manager+Geocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Geocoding.swift"; sourceTree = "<group>"; };
-		C38E886C2B83BA920092B9FA /* Manager+Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Details.swift"; sourceTree = "<group>"; };
 		C38E886E2B83BAAC0092B9FA /* Manager+Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Directions.swift"; sourceTree = "<group>"; };
 		C38E88702B83BAED0092B9FA /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		C38E88722B83BB120092B9FA /* Restaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Restaurants.json; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				C38E88662B83B9DD0092B9FA /* Manager+Search.swift */,
 				C38E88682B83BA2C0092B9FA /* Manager+Location.swift */,
 				C38E886A2B83BA5B0092B9FA /* Manager+Geocoding.swift */,
-				C38E886C2B83BA920092B9FA /* Manager+Details.swift */,
 				C38E886E2B83BAAC0092B9FA /* Manager+Directions.swift */,
 			);
 			path = "View Model";
@@ -278,7 +275,6 @@
 				C38E887A2B83FFB70092B9FA /* MapInteractionButton.swift in Sources */,
 				C38E88672B83B9DD0092B9FA /* Manager+Search.swift in Sources */,
 				C33315082B7E3B6200516138 /* SearchButton.swift in Sources */,
-				C38E886D2B83BA920092B9FA /* Manager+Details.swift in Sources */,
 				C38E88782B83FFA60092B9FA /* ClearButton.swift in Sources */,
 				C3A5EB462B7A72DF00C7E7E2 /* ActionButton.swift in Sources */,
 				C33315062B7E3B1D00516138 /* MapTopControls.swift in Sources */,
