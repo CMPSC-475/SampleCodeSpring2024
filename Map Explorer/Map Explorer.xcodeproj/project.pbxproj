@@ -20,6 +20,9 @@
 		C38E887C2B83FFCC0092B9FA /* GeocodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E887B2B83FFCC0092B9FA /* GeocodeButton.swift */; };
 		C38E887E2B83FFDF0092B9FA /* DiningButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E887D2B83FFDF0092B9FA /* DiningButton.swift */; };
 		C38E88802B83FFEE0092B9FA /* ZoomPlaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E887F2B83FFEE0092B9FA /* ZoomPlaceButton.swift */; };
+		C38E88852B84F9420092B9FA /* CLLocationsCoorsdinate2D+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88842B84F9420092B9FA /* CLLocationsCoorsdinate2D+utils.swift */; };
+		C38E88872B84F96B0092B9FA /* DowntownMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88862B84F96B0092B9FA /* DowntownMap.swift */; };
+		C38E88892B84FF1B0092B9FA /* Manager+Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88882B84FF1B0092B9FA /* Manager+Details.swift */; };
 		C3A5EB2B2B7A716300C7E7E2 /* Map_ExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5EB2A2B7A716300C7E7E2 /* Map_ExplorerApp.swift */; };
 		C3A5EB2D2B7A716300C7E7E2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */; };
 		C3A5EB2F2B7A716500C7E7E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A5EB2E2B7A716500C7E7E2 /* Assets.xcassets */; };
@@ -50,6 +53,9 @@
 		C38E887B2B83FFCC0092B9FA /* GeocodeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeButton.swift; sourceTree = "<group>"; };
 		C38E887D2B83FFDF0092B9FA /* DiningButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningButton.swift; sourceTree = "<group>"; };
 		C38E887F2B83FFEE0092B9FA /* ZoomPlaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomPlaceButton.swift; sourceTree = "<group>"; };
+		C38E88842B84F9420092B9FA /* CLLocationsCoorsdinate2D+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationsCoorsdinate2D+utils.swift"; sourceTree = "<group>"; };
+		C38E88862B84F96B0092B9FA /* DowntownMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DowntownMap.swift; sourceTree = "<group>"; };
+		C38E88882B84FF1B0092B9FA /* Manager+Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Details.swift"; sourceTree = "<group>"; };
 		C3A5EB272B7A716300C7E7E2 /* Map Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A5EB2A2B7A716300C7E7E2 /* Map_ExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_ExplorerApp.swift; sourceTree = "<group>"; };
 		C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 				C38E88762B83FF880092B9FA /* Map Buttons */,
 				C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */,
 				C33315052B7E3B1D00516138 /* MapTopControls.swift */,
+				C38E88862B84F96B0092B9FA /* DowntownMap.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -176,6 +183,8 @@
 				C38E88682B83BA2C0092B9FA /* Manager+Location.swift */,
 				C38E886A2B83BA5B0092B9FA /* Manager+Geocoding.swift */,
 				C38E886E2B83BAAC0092B9FA /* Manager+Directions.swift */,
+				C38E88842B84F9420092B9FA /* CLLocationsCoorsdinate2D+utils.swift */,
+				C38E88882B84FF1B0092B9FA /* Manager+Details.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -259,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38E88892B84FF1B0092B9FA /* Manager+Details.swift in Sources */,
 				C38E886B2B83BA5B0092B9FA /* Manager+Geocoding.swift in Sources */,
 				C38E88692B83BA2C0092B9FA /* Manager+Location.swift in Sources */,
 				C3A5EB442B7A72BD00C7E7E2 /* ButtonRowView.swift in Sources */,
@@ -269,8 +279,10 @@
 				C333150A2B7E3B7300516138 /* Place.swift in Sources */,
 				C3A5EB2D2B7A716300C7E7E2 /* MainView.swift in Sources */,
 				C3A5EB3C2B7A71E200C7E7E2 /* Manager.swift in Sources */,
+				C38E88872B84F96B0092B9FA /* DowntownMap.swift in Sources */,
 				C38E88712B83BAED0092B9FA /* Restaurant.swift in Sources */,
 				C3A5EB2B2B7A716300C7E7E2 /* Map_ExplorerApp.swift in Sources */,
+				C38E88852B84F9420092B9FA /* CLLocationsCoorsdinate2D+utils.swift in Sources */,
 				C3A5EB3E2B7A727000C7E7E2 /* Category.swift in Sources */,
 				C38E887A2B83FFB70092B9FA /* MapInteractionButton.swift in Sources */,
 				C38E88672B83B9DD0092B9FA /* Manager+Search.swift in Sources */,

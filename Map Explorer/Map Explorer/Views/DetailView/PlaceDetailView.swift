@@ -9,17 +9,17 @@ import SwiftUI
 
 struct PlaceDetailView: View {
     @EnvironmentObject var manager : Manager
-    var place : Favorite
+    var place : Place
     var body: some View {
         
             VStack(alignment:.leading) {
                 HStack(alignment: .top) {
                     VStack(alignment:.leading) {
-                        Text(place.title).font(.title)
+                        Text(place.name).font(.title)
                         HStack {
-                            Text("Point of Interest")
+                            Text(manager.poiCategoryStringFrom(place.mapItem.pointOfInterestCategory))
                             Text("·")
-                            Text("Other Info")
+                            Text(manager.infoFrom(place.mapItem.placemark))
                         }
                         
                     }.padding([.bottom,.leading])
