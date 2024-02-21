@@ -11,6 +11,7 @@
 		C33315082B7E3B6200516138 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315072B7E3B6200516138 /* SearchButton.swift */; };
 		C333150A2B7E3B7300516138 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315092B7E3B7300516138 /* Place.swift */; };
 		C38C99B22B8519DA001505DD /* Restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = C38E88722B83BB120092B9FA /* Restaurants.json */; };
+		C38C99B42B865695001505DD /* CircleRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38C99B32B865695001505DD /* CircleRegion.swift */; };
 		C38E88672B83B9DD0092B9FA /* Manager+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88662B83B9DD0092B9FA /* Manager+Search.swift */; };
 		C38E88692B83BA2C0092B9FA /* Manager+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E88682B83BA2C0092B9FA /* Manager+Location.swift */; };
 		C38E886B2B83BA5B0092B9FA /* Manager+Geocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E886A2B83BA5B0092B9FA /* Manager+Geocoding.swift */; };
@@ -41,6 +42,7 @@
 		C33315052B7E3B1D00516138 /* MapTopControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTopControls.swift; sourceTree = "<group>"; };
 		C33315072B7E3B6200516138 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		C33315092B7E3B7300516138 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		C38C99B32B865695001505DD /* CircleRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleRegion.swift; sourceTree = "<group>"; };
 		C38E88662B83B9DD0092B9FA /* Manager+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Search.swift"; sourceTree = "<group>"; };
 		C38E88682B83BA2C0092B9FA /* Manager+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Location.swift"; sourceTree = "<group>"; };
 		C38E886A2B83BA5B0092B9FA /* Manager+Geocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Geocoding.swift"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				C33315092B7E3B7300516138 /* Place.swift */,
 				C38E88702B83BAED0092B9FA /* Restaurant.swift */,
 				C38E88722B83BB120092B9FA /* Restaurants.json */,
+				C38C99B32B865695001505DD /* CircleRegion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C38E88892B84FF1B0092B9FA /* Manager+Details.swift in Sources */,
+				C38C99B42B865695001505DD /* CircleRegion.swift in Sources */,
 				C38E886B2B83BA5B0092B9FA /* Manager+Geocoding.swift in Sources */,
 				C38E88692B83BA2C0092B9FA /* Manager+Location.swift in Sources */,
 				C3A5EB442B7A72BD00C7E7E2 /* ButtonRowView.swift in Sources */,
