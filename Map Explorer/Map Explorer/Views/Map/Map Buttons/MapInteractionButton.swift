@@ -6,18 +6,20 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MapInteractionButton: View {
-
+    @Binding var interactionMode : MapInteractionModes
     var body: some View {
         Button(action:{
             // update interaction mode
+            interactionMode = interactionMode == .all ? .zoom : .all
         }) {
-            Image(systemName: true ? "hand.draw" : "hand.draw.fill")
+            Image(systemName: interactionMode == .all ? "hand.draw.fill" : "hand.draw")
         }
     }
 }
 
 #Preview {
-    MapInteractionButton()
+    MapInteractionButton(interactionMode: .constant(.all))
 }

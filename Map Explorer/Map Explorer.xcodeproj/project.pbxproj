@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C32951B72B87C1B100543B3B /* Manager+Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32951B62B87C1B100543B3B /* Manager+Regions.swift */; };
 		C33315062B7E3B1D00516138 /* MapTopControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315052B7E3B1D00516138 /* MapTopControls.swift */; };
 		C33315082B7E3B6200516138 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315072B7E3B6200516138 /* SearchButton.swift */; };
 		C333150A2B7E3B7300516138 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315092B7E3B7300516138 /* Place.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C32951B62B87C1B100543B3B /* Manager+Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Regions.swift"; sourceTree = "<group>"; };
 		C33315052B7E3B1D00516138 /* MapTopControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTopControls.swift; sourceTree = "<group>"; };
 		C33315072B7E3B6200516138 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		C33315092B7E3B7300516138 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				C38E886E2B83BAAC0092B9FA /* Manager+Directions.swift */,
 				C38E88842B84F9420092B9FA /* CLLocationsCoorsdinate2D+utils.swift */,
 				C38E88882B84FF1B0092B9FA /* Manager+Details.swift */,
+				C32951B62B87C1B100543B3B /* Manager+Regions.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				C33315062B7E3B1D00516138 /* MapTopControls.swift in Sources */,
 				C3A5EB482B7A730500C7E7E2 /* ControlButtons.swift in Sources */,
 				C38E887E2B83FFDF0092B9FA /* DiningButton.swift in Sources */,
+				C32951B72B87C1B100543B3B /* Manager+Regions.swift in Sources */,
 				C38E886F2B83BAAC0092B9FA /* Manager+Directions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

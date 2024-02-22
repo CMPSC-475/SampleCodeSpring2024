@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CircleRegion {
+struct CircleRegion : Identifiable {
     let center: Coord
     var radius : Double
     var id = UUID()

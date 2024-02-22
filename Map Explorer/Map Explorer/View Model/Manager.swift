@@ -18,6 +18,11 @@ class Manager : NSObject, ObservableObject {
     
     
     @Published var places = [Place]()
+    @Published var routes = [MKRoute]()
+    
+    // circular regions
+    @Published var currentCircularRegion : CircleRegion?
+    @Published var circularRegions : [CircleRegion] = []
     
     @Published var isShowingFavorites = true
     

@@ -26,7 +26,7 @@ struct PlaceDetailView: View {
                     Spacer()
                     ControlButtons()
                 }
-                ButtonRow()
+                ButtonRow(place: place)
                     .padding()
             }
     }

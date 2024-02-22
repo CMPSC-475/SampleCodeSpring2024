@@ -25,7 +25,8 @@ extension Manager : CLLocationManagerDelegate {
     }
     
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+        
     }
     
     

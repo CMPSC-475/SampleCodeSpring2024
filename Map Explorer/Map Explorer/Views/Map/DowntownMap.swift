@@ -12,32 +12,56 @@ struct DowntownMap: View {
     @EnvironmentObject var manager : Manager
     @State private var camera : MapCameraPosition = .automatic
     @Binding var selectedPlace : Place?
-    
+    @Binding var interactionMode : MapInteractionModes
     
     var body: some View {
-        Map(position: $camera, selection:$selectedPlace) {
-            //favoriteMarkers
-            if manager.isShowingFavorites {
-                favoriteAnnotations
-            }
-            
-            places
-            
-            UserAnnotation()
         
+        MapReader { proxy in
+            
+            let dragGesture = DragGesture()
+                .onChanged { value in
+                    let centerPoint = value.startLocation
+                    let edgePoint = value.location
+                    //conversion
+                    let centerCoordinate = proxy.convert(centerPoint, from: .local)!
+                    let edgeCoordinate = proxy.convert(edgePoint, from: .local)!
+                    
+                    manager.updateCurrentRegion(center: centerCoordinate, edge: edgeCoordinate)
+                    
+                }
+                .onEnded { value in
+                    manager.addRegion()
+                }
+            Map(position: $camera,
+                interactionModes: interactionMode,
+                selection:$selectedPlace) {
+                //favoriteMarkers
+                if manager.isShowingFavorites {
+                    favoriteAnnotations
+                }
+                
+                places
+                
+                UserAnnotation()
+                
+                regions
+                
+                
+            }
+                .gesture(dragGesture)
+                .onMapCameraChange{ context in
+                    manager.region = context.region
+                }
+            //        .mapControls{
+            //            MapCompass()
+            //            MapPitchToggle()
+            //        }
+                .mapStyle(.standard(pointsOfInterest: [.bank]))
         }
-        .onMapCameraChange{ context in
-            manager.region = context.region
-        }
-//        .mapControls{
-//            MapCompass()
-//            MapPitchToggle()
-//        }
-        .mapStyle(.standard(pointsOfInterest: [.bank]))
         .safeAreaInset(edge: .top) {
             ZStack {
                 Color.white
-                MapTopControls(position: $camera)
+                MapTopControls(position: $camera, interactionMode: $interactionMode)
             }
             .frame(height: 50)
             .padding()
@@ -84,10 +108,25 @@ extension DowntownMap {
         
     }
     
+    var regions : some MapContent {
+        Group {
+            ForEach(manager.circularRegions) { region in
+                MapCircle(center: CLLocationCoordinate2D(coord: region.center), radius: region.radius)
+                    .foregroundStyle(Color.black.opacity(0.3))
+            }
+            
+            if let currentRegion = manager.currentCircularRegion {
+                MapCircle(center: CLLocationCoordinate2D(coord: currentRegion.center), radius: currentRegion.radius)
+                    .foregroundStyle(Color.blue.opacity(0.3))
+            }
+        }
+    }
+    
     
 }
 
 #Preview {
-    DowntownMap(selectedPlace: .constant(Place.standard))
+    DowntownMap(selectedPlace: .constant(Place.standard),
+                interactionMode: .constant(.all))
         .environmentObject(Manager())
 }

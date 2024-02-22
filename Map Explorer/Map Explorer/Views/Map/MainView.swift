@@ -14,9 +14,10 @@ struct MainView: View {
     
     @State private var selectedPlace : Place?
 
+    @State var interactionMode : MapInteractionModes = .all
     var body: some View {
         
-        DowntownMap(selectedPlace: $selectedPlace)
+        DowntownMap(selectedPlace: $selectedPlace, interactionMode: $interactionMode)
             .sheet(item: $selectedPlace) { selectedPlace in
             PlaceDetailView(place: selectedPlace)
                 .presentationDetents([.fraction(0.3)])
