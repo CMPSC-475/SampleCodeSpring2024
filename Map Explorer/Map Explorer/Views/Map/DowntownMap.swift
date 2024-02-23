@@ -46,6 +46,14 @@ struct DowntownMap: View {
                 
                 regions
                 
+                // if a route is requested, show polylines
+                if let route = manager.routes.first {
+                    ForEach(route.steps, id:\.self) { step in
+                        MapPolyline(step.polyline)
+                            .stroke(.black, lineWidth: 5.0)
+                    }
+                    
+                }
                 
             }
                 .gesture(dragGesture)
