@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C32951B72B87C1B100543B3B /* Manager+Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32951B62B87C1B100543B3B /* Manager+Regions.swift */; };
+		C32951BA2B8D002200543B3B /* MapViewUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32951B92B8D002200543B3B /* MapViewUIKit.swift */; };
+		C32951BC2B8D005100543B3B /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32951BB2B8D005100543B3B /* MapViewCoordinator.swift */; };
+		C32951BE2B8D01A000543B3B /* MapSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32951BD2B8D01A000543B3B /* MapSelectionView.swift */; };
+		C32951C02B8D039F00543B3B /* DroppedPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32951BF2B8D039F00543B3B /* DroppedPin.swift */; };
 		C33315062B7E3B1D00516138 /* MapTopControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315052B7E3B1D00516138 /* MapTopControls.swift */; };
 		C33315082B7E3B6200516138 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315072B7E3B6200516138 /* SearchButton.swift */; };
 		C333150A2B7E3B7300516138 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33315092B7E3B7300516138 /* Place.swift */; };
@@ -41,6 +45,10 @@
 
 /* Begin PBXFileReference section */
 		C32951B62B87C1B100543B3B /* Manager+Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Regions.swift"; sourceTree = "<group>"; };
+		C32951B92B8D002200543B3B /* MapViewUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewUIKit.swift; sourceTree = "<group>"; };
+		C32951BB2B8D005100543B3B /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
+		C32951BD2B8D01A000543B3B /* MapSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionView.swift; sourceTree = "<group>"; };
+		C32951BF2B8D039F00543B3B /* DroppedPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppedPin.swift; sourceTree = "<group>"; };
 		C33315052B7E3B1D00516138 /* MapTopControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTopControls.swift; sourceTree = "<group>"; };
 		C33315072B7E3B6200516138 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		C33315092B7E3B7300516138 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -86,13 +94,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C32951B82B8D000500543B3B /* Map UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C32951B92B8D002200543B3B /* MapViewUIKit.swift */,
+				C32951BB2B8D005100543B3B /* MapViewCoordinator.swift */,
+			);
+			path = "Map UIKit";
+			sourceTree = "<group>";
+		};
 		C33315032B7E3A4A00516138 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				C32951B82B8D000500543B3B /* Map UIKit */,
 				C38E88762B83FF880092B9FA /* Map Buttons */,
 				C3A5EB2C2B7A716300C7E7E2 /* MainView.swift */,
 				C33315052B7E3B1D00516138 /* MapTopControls.swift */,
 				C38E88862B84F96B0092B9FA /* DowntownMap.swift */,
+				C32951BD2B8D01A000543B3B /* MapSelectionView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -177,6 +196,7 @@
 				C38E88702B83BAED0092B9FA /* Restaurant.swift */,
 				C38E88722B83BB120092B9FA /* Restaurants.json */,
 				C38C99B32B865695001505DD /* CircleRegion.swift */,
+				C32951BF2B8D039F00543B3B /* DroppedPin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +300,7 @@
 				C38C99B42B865695001505DD /* CircleRegion.swift in Sources */,
 				C38E886B2B83BA5B0092B9FA /* Manager+Geocoding.swift in Sources */,
 				C38E88692B83BA2C0092B9FA /* Manager+Location.swift in Sources */,
+				C32951BE2B8D01A000543B3B /* MapSelectionView.swift in Sources */,
 				C3A5EB442B7A72BD00C7E7E2 /* ButtonRowView.swift in Sources */,
 				C38E88802B83FFEE0092B9FA /* ZoomPlaceButton.swift in Sources */,
 				C38E887C2B83FFCC0092B9FA /* GeocodeButton.swift in Sources */,
@@ -291,17 +312,20 @@
 				C38E88872B84F96B0092B9FA /* DowntownMap.swift in Sources */,
 				C38E88712B83BAED0092B9FA /* Restaurant.swift in Sources */,
 				C3A5EB2B2B7A716300C7E7E2 /* Map_ExplorerApp.swift in Sources */,
+				C32951BC2B8D005100543B3B /* MapViewCoordinator.swift in Sources */,
 				C38E88852B84F9420092B9FA /* CLLocationsCoorsdinate2D+utils.swift in Sources */,
 				C3A5EB3E2B7A727000C7E7E2 /* Category.swift in Sources */,
 				C38E887A2B83FFB70092B9FA /* MapInteractionButton.swift in Sources */,
 				C38E88672B83B9DD0092B9FA /* Manager+Search.swift in Sources */,
 				C33315082B7E3B6200516138 /* SearchButton.swift in Sources */,
+				C32951BA2B8D002200543B3B /* MapViewUIKit.swift in Sources */,
 				C38E88782B83FFA60092B9FA /* ClearButton.swift in Sources */,
 				C3A5EB462B7A72DF00C7E7E2 /* ActionButton.swift in Sources */,
 				C33315062B7E3B1D00516138 /* MapTopControls.swift in Sources */,
 				C3A5EB482B7A730500C7E7E2 /* ControlButtons.swift in Sources */,
 				C38E887E2B83FFDF0092B9FA /* DiningButton.swift in Sources */,
 				C32951B72B87C1B100543B3B /* Manager+Regions.swift in Sources */,
+				C32951C02B8D039F00543B3B /* DroppedPin.swift in Sources */,
 				C38E886F2B83BAAC0092B9FA /* Manager+Directions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

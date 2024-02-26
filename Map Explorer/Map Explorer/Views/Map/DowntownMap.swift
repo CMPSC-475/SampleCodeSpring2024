@@ -20,6 +20,7 @@ struct DowntownMap: View {
             
             let dragGesture = DragGesture()
                 .onChanged { value in
+                    guard !(interactionMode == .all) else {return}
                     let centerPoint = value.startLocation
                     let edgePoint = value.location
                     //conversion
@@ -30,6 +31,7 @@ struct DowntownMap: View {
                     
                 }
                 .onEnded { value in
+                    guard !(interactionMode == .all) else {return}
                     manager.addRegion()
                 }
             Map(position: $camera,
@@ -60,10 +62,6 @@ struct DowntownMap: View {
                 .onMapCameraChange{ context in
                     manager.region = context.region
                 }
-            //        .mapControls{
-            //            MapCompass()
-            //            MapPitchToggle()
-            //        }
                 .mapStyle(.standard(pointsOfInterest: [.bank]))
         }
         .safeAreaInset(edge: .top) {
