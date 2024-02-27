@@ -24,6 +24,7 @@ class Manager : NSObject, ObservableObject {
     @Published var currentCircularRegion : CircleRegion?
     @Published var circularRegions : [CircleRegion] = []
     
+    
     @Published var isShowingFavorites = true
     
     @Published var camera : MapCameraPosition = .region(MKCoordinateRegion(center: .stateCollege, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)))
@@ -35,6 +36,8 @@ class Manager : NSObject, ObservableObject {
     
     @Published var userLocationDescription : String?
     @Published var showAlert : Bool = false
+    
+    var downtownOverlay : MKPolygon {MKPolygon(coordinates: CLLocationCoordinate2D.downtownCoordinates, count: CLLocationCoordinate2D.downtownCoordinates.count)}
     
     override init() {
         locationManager = CLLocationManager()
@@ -51,6 +54,8 @@ class Manager : NSObject, ObservableObject {
 
     func clearAll() {
         places.removeAll()
+        circularRegions.removeAll()
+        routes.removeAll()
     }
     
 }

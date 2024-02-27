@@ -47,7 +47,7 @@ struct DowntownMap: View {
                 UserAnnotation()
                 
                 regions
-                
+                downtown
                 // if a route is requested, show polylines
                 if let route = manager.routes.first {
                     ForEach(route.steps, id:\.self) { step in
@@ -117,6 +117,12 @@ extension DowntownMap {
                     .foregroundStyle(Color.blue.opacity(0.3))
             }
         }
+    }
+    
+    
+    var downtown : some MapContent {
+        MapPolygon(manager.downtownOverlay)
+            .foregroundStyle(.blue.opacity(0.4))
     }
     
     
