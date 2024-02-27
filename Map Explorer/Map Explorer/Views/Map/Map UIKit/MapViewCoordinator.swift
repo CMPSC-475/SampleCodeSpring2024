@@ -23,7 +23,7 @@ class MapViewCoordinator : NSObject, MKMapViewDelegate {
     // called when Map needs to display an annotation on the map
    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         //TODO: complete this code
-            return MKAnnotationView()
+            return nil
     }
     
     
@@ -39,7 +39,21 @@ class MapViewCoordinator : NSObject, MKMapViewDelegate {
     // Called when Map needs to display an overlay on the map
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
 
-            MKCircleRenderer()
+        switch overlay {
+        case is MKPolygon:
+            let polygonRenderer = MKPolygonRenderer(polygon: overlay as! MKPolygon)
+            polygonRenderer.strokeColor = UIColor.red
+            polygonRenderer.lineWidth = 2.0
+            polygonRenderer.fillColor = UIColor.blue.withAlphaComponent(0.3)
+            return polygonRenderer
+        case is MKPolyline:
+            let polyLineRenderer = MKPolylineRenderer(overlay: overlay)
+            polyLineRenderer.strokeColor = UIColor.red
+            polyLineRenderer.lineWidth = 4.0
+            return polyLineRenderer
+        default:
+            assert(false, "Unhandled Overlay")
+        }
 
     }
     

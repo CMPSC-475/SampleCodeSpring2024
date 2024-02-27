@@ -21,7 +21,8 @@ struct MapSelectionView: View {
             DowntownMap(camera: $camera, selectedPlace: $selectedPlace, interactionMode: $modes)
 
         case .UIKit:
-            Text("Add MKMapView Here")
+            MapViewUIKit()
+                .ignoresSafeArea()
         }
     }
 }

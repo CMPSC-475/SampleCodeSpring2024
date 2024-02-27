@@ -20,6 +20,8 @@ class Manager : NSObject, ObservableObject {
     @Published var places = [Place]()
     @Published var routes = [MKRoute]()
     
+    var polylines : [MKPolyline] {routes.map { $0.polyline }}
+    
     // circular regions
     @Published var currentCircularRegion : CircleRegion?
     @Published var circularRegions : [CircleRegion] = []

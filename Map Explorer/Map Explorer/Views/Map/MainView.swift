@@ -18,7 +18,7 @@ struct MainView: View {
     @State private var selectedPlace : Place?
     @State var camera : MapCameraPosition = .automatic
     @State var interactionMode : MapInteractionModes = .all
-    @State var mapKind : MapKind = .SwiftUI
+    @State var mapKind : MapKind = .UIKit
     
     var body: some View {
         
