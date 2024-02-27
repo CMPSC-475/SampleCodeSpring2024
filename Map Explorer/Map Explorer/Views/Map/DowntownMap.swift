@@ -10,7 +10,7 @@ import MapKit
 
 struct DowntownMap: View {
     @EnvironmentObject var manager : Manager
-    @State private var camera : MapCameraPosition = .automatic
+    @Binding var camera : MapCameraPosition
     @Binding var selectedPlace : Place?
     @Binding var interactionMode : MapInteractionModes
     
@@ -64,16 +64,7 @@ struct DowntownMap: View {
                 }
                 .mapStyle(.standard(pointsOfInterest: [.bank]))
         }
-        .safeAreaInset(edge: .top) {
-            ZStack {
-                Color.white
-                MapTopControls(position: $camera, interactionMode: $interactionMode)
-            }
-            .frame(height: 50)
-            .padding()
-            .shadow(radius: 20)
 
-        }
     }
 }
 
@@ -132,7 +123,7 @@ extension DowntownMap {
 }
 
 #Preview {
-    DowntownMap(selectedPlace: .constant(Place.standard),
+    DowntownMap(camera: .constant(.automatic), selectedPlace: .constant(Place.standard),
                 interactionMode: .constant(.all))
         .environmentObject(Manager())
 }

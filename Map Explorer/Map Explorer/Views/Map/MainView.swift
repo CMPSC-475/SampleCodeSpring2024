@@ -16,18 +16,29 @@ enum MapKind {
 struct MainView: View {
     @EnvironmentObject var manager : Manager
     @State private var selectedPlace : Place?
+    @State var camera : MapCameraPosition = .automatic
     @State var interactionMode : MapInteractionModes = .all
     @State var mapKind : MapKind = .SwiftUI
     
     var body: some View {
         
-        MapSelectionView(mapKind: $mapKind, modes: $interactionMode, selectedPlace: $selectedPlace)
+        MapSelectionView(camera: $camera, mapKind: $mapKind, modes: $interactionMode, selectedPlace: $selectedPlace)
             .sheet(item: $selectedPlace) { selectedPlace in
             PlaceDetailView(place: selectedPlace)
                 .presentationDetents([.fraction(0.3)])
             }
             .alert("User's Location", isPresented: $manager.showAlert, actions: {}) {
                 Text(manager.userLocationDescription ?? "No Location Found")
+            }
+            .safeAreaInset(edge: .bottom) {
+                ZStack {
+                    Color.white
+                    MapTopControls(position: $camera, interactionMode: $interactionMode, mapKind: $mapKind)
+                }
+                .frame(height: 50)
+                .padding()
+                .shadow(radius: 20)
+
             }
 
     }

@@ -10,6 +10,7 @@ import MapKit
 
 struct MapSelectionView: View {
     @EnvironmentObject var manager : Manager
+    @Binding var camera : MapCameraPosition
     @Binding var mapKind : MapKind
     @Binding var modes : MapInteractionModes
     @Binding var selectedPlace : Place?
@@ -17,7 +18,7 @@ struct MapSelectionView: View {
     var body : some View {
         switch mapKind {
         case .SwiftUI:
-            DowntownMap(selectedPlace: $selectedPlace, interactionMode: $modes)
+            DowntownMap(camera: $camera, selectedPlace: $selectedPlace, interactionMode: $modes)
 
         case .UIKit:
             Text("Add MKMapView Here")
@@ -26,6 +27,6 @@ struct MapSelectionView: View {
 }
 
 #Preview {
-    MapSelectionView(mapKind: .constant(.SwiftUI), modes: .constant(.all), selectedPlace: .constant(Place.standard))
+    MapSelectionView(camera: .constant(.automatic), mapKind: .constant(.SwiftUI), modes: .constant(.all), selectedPlace: .constant(Place.standard))
         .environmentObject(Manager())
 }
