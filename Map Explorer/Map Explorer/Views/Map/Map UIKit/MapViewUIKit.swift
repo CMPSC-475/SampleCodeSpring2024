@@ -12,6 +12,7 @@ import SwiftUI
 
 struct MapViewUIKit : UIViewRepresentable {
     @EnvironmentObject var manager : Manager
+    @Binding var modes : MapInteractionModes
  
     
     func makeUIView(context: Context) -> MKMapView {
@@ -20,28 +21,47 @@ struct MapViewUIKit : UIViewRepresentable {
         mapView.showsUserLocation = true
         mapView.showsUserTrackingButton = true
         mapView.delegate = context.coordinator
+        
+        let dragGesture = UIPanGestureRecognizer(target: context.coordinator, action: #selector(MapViewCoordinator.dragHandler(recognizer:)))
+        
+        mapView.addGestureRecognizer(dragGesture)
         return mapView
     }
 
     func updateUIView(_ mapView: MKMapView, context: Context) {
+        
+        switch modes {
+        case .all:
+            mapView.isScrollEnabled = true
+        default:
+            mapView.isScrollEnabled = false
+        }
+        
         mapView.removeAnnotations(mapView.annotations)
         mapView.removeOverlays(mapView.overlays)
         mapView.addAnnotations(manager.places)
         mapView.addOverlay(manager.downtownOverlay)
         mapView.addOverlays(manager.polylines)
+        mapView.addOverlays(manager.circularRegions.map({ $0.overlayWithTitle(RegionType.done.rawValue)
+        }))
+        
+        if let current = manager.currentCircularRegion {
+            mapView.addOverlay(current.overlayWithTitle(RegionType.current.rawValue))
+        }
+        
         
 
     }
     
     
     func makeCoordinator() -> MapViewCoordinator {
-        MapViewCoordinator()
+        MapViewCoordinator(manager: manager)
     }
 }
 
 
 #Preview {
-    MapViewUIKit()
+    MapViewUIKit(modes: .constant(.all))
         .environmentObject(Manager())
 }
 
