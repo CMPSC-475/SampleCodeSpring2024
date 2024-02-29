@@ -15,15 +15,14 @@ enum MapKind {
 
 struct MainView: View {
     @EnvironmentObject var manager : Manager
-    @State private var selectedPlace : Place?
     @State var camera : MapCameraPosition = .automatic
     @State var interactionMode : MapInteractionModes = .all
     @State var mapKind : MapKind = .UIKit
     
     var body: some View {
         
-        MapSelectionView(camera: $camera, mapKind: $mapKind, modes: $interactionMode, selectedPlace: $selectedPlace)
-            .sheet(item: $selectedPlace) { selectedPlace in
+        MapSelectionView(camera: $camera, mapKind: $mapKind, modes: $interactionMode, selectedPlace: $manager.selectedPlace)
+            .sheet(item: $manager.selectedPlace) { selectedPlace in
             PlaceDetailView(place: selectedPlace)
                 .presentationDetents([.fraction(0.3)])
             }
