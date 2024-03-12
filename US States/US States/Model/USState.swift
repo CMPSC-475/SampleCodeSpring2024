@@ -29,9 +29,9 @@ extension USState : Identifiable {
 extension USState {
     
     enum CodingKeys: String, CodingKey {
-        case name
-        case admissionYear
-        case stateBird
+        case name = "state"
+        case admissionYear = "year"
+        case stateBird = "bird"
         case capital
         case info
         case favorite
@@ -46,10 +46,9 @@ extension USState {
         info = try values.decode(String.self, forKey: .info)
         admissionYear = try values.decode(Int.self, forKey: .admissionYear)
         images = try values.decode([String].self, forKey: .images)
-        
-        favorite = false
-        visited = false
-        stateBird = nil
+        stateBird = try values.decodeIfPresent(String.self, forKey: .stateBird)
+        favorite = try values.decodeIfPresent(Bool.self, forKey: .favorite) ?? false
+        visited = try values.decodeIfPresent(Bool.self, forKey: .visited) ?? false
     }
 
 }
