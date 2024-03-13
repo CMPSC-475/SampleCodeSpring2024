@@ -12,7 +12,7 @@ typealias USStates = [USState]
 @Observable
 class StatesManager {
     var theStates : USStates
-
+    
     private let persistence : Persistence<USStates>
     
     init() {
@@ -24,4 +24,9 @@ class StatesManager {
     }
     
     
+    //MARK: Formatting
+    func formatted(year:Int) -> String {
+        String(format: "%04d",year)
+    }
+ 
 }

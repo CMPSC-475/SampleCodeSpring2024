@@ -15,6 +15,15 @@
 		C31001A52B9FBF660034B0C0 /* StateData.json in Resources */ = {isa = PBXBuildFile; fileRef = C31001A42B9FBF660034B0C0 /* StateData.json */; };
 		C31001A72B9FBF940034B0C0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31001A62B9FBF940034B0C0 /* Persistence.swift */; };
 		C31001A92B9FBFB00034B0C0 /* StatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31001A82B9FBFB00034B0C0 /* StatesManager.swift */; };
+		C3D8E56C2BA251C100F5EAEC /* StateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E56B2BA251C100F5EAEC /* StateRow.swift */; };
+		C3D8E56F2BA2521100F5EAEC /* StateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E56E2BA2521100F5EAEC /* StateDetailView.swift */; };
+		C3D8E5712BA2524200F5EAEC /* DetailBird.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E5702BA2524200F5EAEC /* DetailBird.swift */; };
+		C3D8E5732BA2525600F5EAEC /* DetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E5722BA2525600F5EAEC /* DetailHeader.swift */; };
+		C3D8E5752BA2527100F5EAEC /* DetailImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E5742BA2527100F5EAEC /* DetailImages.swift */; };
+		C3D8E5772BA2528A00F5EAEC /* FeatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E5762BA2528A00F5EAEC /* FeatureButton.swift */; };
+		C3D8E5792BA252F500F5EAEC /* StateManager+Sectioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E5782BA252F500F5EAEC /* StateManager+Sectioning.swift */; };
+		C3D8E57B2BA2531000F5EAEC /* Sectioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E57A2BA2531000F5EAEC /* Sectioning.swift */; };
+		C3D8E57D2BA2536900F5EAEC /* SectionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E57C2BA2536900F5EAEC /* SectionPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +36,15 @@
 		C31001A42B9FBF660034B0C0 /* StateData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StateData.json; sourceTree = "<group>"; };
 		C31001A62B9FBF940034B0C0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		C31001A82B9FBFB00034B0C0 /* StatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesManager.swift; sourceTree = "<group>"; };
+		C3D8E56B2BA251C100F5EAEC /* StateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRow.swift; sourceTree = "<group>"; };
+		C3D8E56E2BA2521100F5EAEC /* StateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailView.swift; sourceTree = "<group>"; };
+		C3D8E5702BA2524200F5EAEC /* DetailBird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBird.swift; sourceTree = "<group>"; };
+		C3D8E5722BA2525600F5EAEC /* DetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeader.swift; sourceTree = "<group>"; };
+		C3D8E5742BA2527100F5EAEC /* DetailImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImages.swift; sourceTree = "<group>"; };
+		C3D8E5762BA2528A00F5EAEC /* FeatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureButton.swift; sourceTree = "<group>"; };
+		C3D8E5782BA252F500F5EAEC /* StateManager+Sectioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateManager+Sectioning.swift"; sourceTree = "<group>"; };
+		C3D8E57A2BA2531000F5EAEC /* Sectioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sectioning.swift; sourceTree = "<group>"; };
+		C3D8E57C2BA2536900F5EAEC /* SectionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +109,8 @@
 			children = (
 				C31001A62B9FBF940034B0C0 /* Persistence.swift */,
 				C31001A82B9FBFB00034B0C0 /* StatesManager.swift */,
+				C3D8E5782BA252F500F5EAEC /* StateManager+Sectioning.swift */,
+				C3D8E57A2BA2531000F5EAEC /* Sectioning.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -98,9 +118,24 @@
 		C31001A12B9FBF180034B0C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C3D8E56D2BA251FB00F5EAEC /* Details */,
 				C31001932B9FBEE00034B0C0 /* StatesList.swift */,
+				C3D8E56B2BA251C100F5EAEC /* StateRow.swift */,
+				C3D8E57C2BA2536900F5EAEC /* SectionPicker.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C3D8E56D2BA251FB00F5EAEC /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				C3D8E56E2BA2521100F5EAEC /* StateDetailView.swift */,
+				C3D8E5702BA2524200F5EAEC /* DetailBird.swift */,
+				C3D8E5722BA2525600F5EAEC /* DetailHeader.swift */,
+				C3D8E5742BA2527100F5EAEC /* DetailImages.swift */,
+				C3D8E5762BA2528A00F5EAEC /* FeatureButton.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,10 +210,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C31001A32B9FBF3D0034B0C0 /* USState.swift in Sources */,
+				C3D8E5732BA2525600F5EAEC /* DetailHeader.swift in Sources */,
+				C3D8E57B2BA2531000F5EAEC /* Sectioning.swift in Sources */,
+				C3D8E57D2BA2536900F5EAEC /* SectionPicker.swift in Sources */,
 				C31001A92B9FBFB00034B0C0 /* StatesManager.swift in Sources */,
+				C3D8E56F2BA2521100F5EAEC /* StateDetailView.swift in Sources */,
 				C31001A72B9FBF940034B0C0 /* Persistence.swift in Sources */,
 				C31001942B9FBEE00034B0C0 /* StatesList.swift in Sources */,
+				C3D8E5792BA252F500F5EAEC /* StateManager+Sectioning.swift in Sources */,
+				C3D8E56C2BA251C100F5EAEC /* StateRow.swift in Sources */,
+				C3D8E5772BA2528A00F5EAEC /* FeatureButton.swift in Sources */,
 				C31001922B9FBEE00034B0C0 /* US_StatesApp.swift in Sources */,
+				C3D8E5752BA2527100F5EAEC /* DetailImages.swift in Sources */,
+				C3D8E5712BA2524200F5EAEC /* DetailBird.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,45 +13,19 @@ struct StatesList: View {
         @Bindable var manager = manager
         NavigationStack {
             List {
-                ForEach($manager.theStates) {
-                    $aState in
-                    NavigationLink(destination: StateDetailView(aState: $aState)) {
-                        StateRow(aState: $aState)
-                    }
-                    
+                ForEach($manager.theStates) {$aState in
+                    NavigationLink(destination: StateDetailView(theState:$aState)) {  StateRow(theState: $aState) }
                 }
-                
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    SectionPicker()
+                }
             }
         }
     }
 }
 
-
-struct StateRow : View {
-    @Binding var aState : USState
-    var body : some View {
-        Text("\(aState.name)")
-            .foregroundStyle(Color("psu"))
-        Button(action: {aState.favorite.toggle()}) {
-            Image(systemName: aState.favorite ? "star.fill" : "star")
-        }
-        
-    }
-}
-
-
-struct StateDetailView : View {
-    @Binding var aState : USState
-    var body : some View {
-        Text("\(aState.name)")
-            .foregroundStyle(Color("psu"))
-        Button(action: {aState.favorite.toggle()}) {
-            Image(systemName: aState.favorite ? "star.fill" : "star")
-        }
-        
-        
-    }
-}
 
 #Preview {
     StatesList()
