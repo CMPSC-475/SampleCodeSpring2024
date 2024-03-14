@@ -9,12 +9,26 @@ import SwiftUI
 
 struct StatesList: View {
     @Environment(StatesManager.self) var manager
+    @AppStorage("sectioning") var sectioning : Sectioning = .none
+    
     var body: some View {
         @Bindable var manager = manager
         NavigationStack {
             List {
-                ForEach($manager.theStates) {$aState in
-                    NavigationLink(destination: StateDetailView(theState:$aState)) {  StateRow(theState: $aState) }
+                ForEach(manager.sectionInfo(for: sectioning)) {sectionInfo in
+                    Section {
+                        ForEach($manager.theStates) { $aState in
+                            if(sectionInfo.identifiers.contains(aState.id)) {
+                                NavigationLink(destination: StateDetailView(theState: $aState)) {
+                                    StateRow(theState: aState)
+                                }
+                            }
+                        }
+                        
+                    } header : {
+                        Text(sectionInfo.title)
+                    }
+                    
                 }
             }
             .toolbar {

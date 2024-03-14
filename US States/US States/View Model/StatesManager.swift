@@ -15,6 +15,8 @@ class StatesManager {
     
     private let persistence : Persistence<USStates>
     
+    var sectioning : Sectioning = .none
+    
     init() {
         let filename = "StateData"
         persistence = Persistence<USStates>(filename:filename)

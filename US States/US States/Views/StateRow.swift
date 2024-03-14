@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct StateRow: View {
-    @Binding var theState : USState
+    var theState : USState
     var body: some View {
         HStack {
             StateDetails(theState: theState)
@@ -70,6 +70,6 @@ struct StateFeature : View {
 
 
 #Preview {
-    StateRow(theState: .constant(USState.standard))
+    StateRow(theState: USState.standard)
         .environment(StatesManager())
 }

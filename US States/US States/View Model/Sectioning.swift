@@ -15,6 +15,6 @@ enum Sectioning: String, CaseIterable, Codable {
 
 struct SectionInfo : Identifiable {
     let title : String  // title for section
-    let indicies : [Int]  // indices of states for section
+    let identifiers : Set<String>  // states for section
     var id : String {title}
 }

@@ -9,11 +9,21 @@ import SwiftUI
 
 struct SectionPicker: View {
 
+    @Environment(StatesManager.self) var manager
+    @AppStorage("sectioning") var sectioning : Sectioning = .none
+    
     var body: some View {
-        Text("")
+        @Bindable var manager = manager
+        Picker("Sectioning", selection: $sectioning) {
+            ForEach(Sectioning.allCases, id:\.self) {
+                Text($0.rawValue)
+                    .tag($0)
+            }
+        }
     }
 }
 
 #Preview {
     SectionPicker()
+        .environment(StatesManager())
 }

@@ -20,6 +20,14 @@ struct USState : Codable  {
     static let standard = USState(name: "Pennsyltucky", capital: "MiddleOfNowhere", info: "Welcome to Pennsyltucky", admissionYear: 1776, favorite: true, visited: true, images: [], stateBird: "Ruffed Grouse")
 }
 
+
+//computed props
+extension USState {
+    var firstLetter : String {String(name.prefix(1))}
+    var decadeAdmitted : String {String(admissionYear - admissionYear%10)}
+}
+
+
 //Identifiable
 extension USState : Identifiable {
     var id : String { name }
