@@ -25,6 +25,7 @@ struct USState : Codable  {
 extension USState {
     var firstLetter : String {String(name.prefix(1))}
     var decadeAdmitted : String  {String(admissionYear - admissionYear%10)}
+    var centuryFounded: Int { admissionYear/100 }
     var empty : String {""}  // for no sectioning
 }
 

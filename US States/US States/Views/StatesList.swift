@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StatesList: View {
     @Environment(StatesManager.self) var manager
-    @AppStorage("sectioning") var sectioning : Sectioning = .none
+    @AppStorage(Storage.sectioning) var sectioning : Sectioning = .none
     
     var body: some View {
         @Bindable var manager = manager
