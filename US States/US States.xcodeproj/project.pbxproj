@@ -17,6 +17,9 @@
 		C31001A92B9FBFB00034B0C0 /* StatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31001A82B9FBFB00034B0C0 /* StatesManager.swift */; };
 		C33A7D872BA9AE78007C093A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A7D862BA9AE78007C093A /* Constants.swift */; };
 		C33A7D9B2BA9E459007C093A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A7D9A2BA9E459007C093A /* Category.swift */; };
+		C38970EA2BA9F2F000227DC3 /* HomeStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38970E92BA9F2F000227DC3 /* HomeStateView.swift */; };
+		C38970EC2BA9F53D00227DC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38970EB2BA9F53D00227DC3 /* HomeView.swift */; };
+		C38970EE2BA9F60600227DC3 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38970ED2BA9F60600227DC3 /* CategoryView.swift */; };
 		C3D8E56C2BA251C100F5EAEC /* StateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E56B2BA251C100F5EAEC /* StateRow.swift */; };
 		C3D8E56F2BA2521100F5EAEC /* StateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E56E2BA2521100F5EAEC /* StateDetailView.swift */; };
 		C3D8E5712BA2524200F5EAEC /* DetailBird.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E5702BA2524200F5EAEC /* DetailBird.swift */; };
@@ -40,6 +43,9 @@
 		C31001A82B9FBFB00034B0C0 /* StatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesManager.swift; sourceTree = "<group>"; };
 		C33A7D862BA9AE78007C093A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C33A7D9A2BA9E459007C093A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C38970E92BA9F2F000227DC3 /* HomeStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStateView.swift; sourceTree = "<group>"; };
+		C38970EB2BA9F53D00227DC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C38970ED2BA9F60600227DC3 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		C3D8E56B2BA251C100F5EAEC /* StateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRow.swift; sourceTree = "<group>"; };
 		C3D8E56E2BA2521100F5EAEC /* StateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailView.swift; sourceTree = "<group>"; };
 		C3D8E5702BA2524200F5EAEC /* DetailBird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBird.swift; sourceTree = "<group>"; };
@@ -128,6 +134,9 @@
 				C3D8E56B2BA251C100F5EAEC /* StateRow.swift */,
 				C3D8E57C2BA2536900F5EAEC /* SectionPicker.swift */,
 				C33A7D862BA9AE78007C093A /* Constants.swift */,
+				C38970E92BA9F2F000227DC3 /* HomeStateView.swift */,
+				C38970EB2BA9F53D00227DC3 /* HomeView.swift */,
+				C38970ED2BA9F60600227DC3 /* CategoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,12 +226,15 @@
 			files = (
 				C31001A32B9FBF3D0034B0C0 /* USState.swift in Sources */,
 				C3D8E5732BA2525600F5EAEC /* DetailHeader.swift in Sources */,
+				C38970EA2BA9F2F000227DC3 /* HomeStateView.swift in Sources */,
 				C3D8E57B2BA2531000F5EAEC /* Sectioning.swift in Sources */,
 				C3D8E57D2BA2536900F5EAEC /* SectionPicker.swift in Sources */,
+				C38970EE2BA9F60600227DC3 /* CategoryView.swift in Sources */,
 				C31001A92B9FBFB00034B0C0 /* StatesManager.swift in Sources */,
 				C33A7D872BA9AE78007C093A /* Constants.swift in Sources */,
 				C3D8E56F2BA2521100F5EAEC /* StateDetailView.swift in Sources */,
 				C33A7D9B2BA9E459007C093A /* Category.swift in Sources */,
+				C38970EC2BA9F53D00227DC3 /* HomeView.swift in Sources */,
 				C31001A72B9FBF940034B0C0 /* Persistence.swift in Sources */,
 				C31001942B9FBEE00034B0C0 /* StatesList.swift in Sources */,
 				C3D8E5792BA252F500F5EAEC /* StateManager+Sectioning.swift in Sources */,

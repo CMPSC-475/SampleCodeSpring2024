@@ -12,7 +12,7 @@ struct US_StatesApp: App {
     @State var manager = StatesManager()
     var body: some Scene {
         WindowGroup {
-        StatesList()
+        HomeView()
                 .environment(manager)
         }
     }

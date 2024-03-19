@@ -16,7 +16,7 @@ class StatesManager {
     private let persistence : Persistence<USStates>
     
     var centuries : [Int] {
-        return Array(Set(theStates.map({ $0.centuryFounded })))
+        return Array(Set(theStates.map({ $0.centuryFounded }))).sorted()
     }
     
     init() {
