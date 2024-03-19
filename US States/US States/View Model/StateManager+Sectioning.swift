@@ -11,19 +11,7 @@ extension StatesManager {
     
     
     func sectionInfo(for sec: Sectioning) -> [SectionInfo] {
-        switch sec {
-            
-        case .none:
-            let ids = Set(theStates.map{$0.id})
-            return [SectionInfo(title: "", identifiers: ids )]
-            
-        case .byName:
-            return sectionInfo(kp: \USState.firstLetter)
-            
-        case .byDecade:
-            return sectionInfo(kp: \USState.decadeAdmitted)
-            
-        }
+        sectionInfo(kp: sec.keyPath)
     }
     
     private func sectionInfo(kp: KeyPath<USState, String>) -> [SectionInfo] {

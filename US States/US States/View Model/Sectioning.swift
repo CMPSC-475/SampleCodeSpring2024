@@ -18,3 +18,15 @@ struct SectionInfo : Identifiable {
     let identifiers : Set<String>  // states for section
     var id : String {title}
 }
+
+
+
+extension Sectioning {
+    var keyPath : KeyPath<USState,String> {
+        switch self {
+        case .none: \USState.empty
+        case .byName: \USState.firstLetter
+        case .byDecade: \USState.decadeAdmitted
+        }
+    }
+}

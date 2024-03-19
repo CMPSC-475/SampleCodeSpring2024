@@ -15,8 +15,8 @@ struct DetailHeader: View {
         HStack(alignment: .center) {
             Text("Founded: \(manager.formatted(year: theState.admissionYear))")
             Spacer()
-            FeatureButton(value: $theState.visited, iconName: "car")
-            FeatureButton(value: $theState.favorite, iconName: "star")
+            FeatureButton(value: $theState.visited, iconName: Icons.visited )
+            FeatureButton(value: $theState.favorite, iconName: Icons.favorite)
         }
     }
 }

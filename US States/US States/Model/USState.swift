@@ -21,10 +21,11 @@ struct USState : Codable  {
 }
 
 
-//computed props
+//Computed Properties
 extension USState {
     var firstLetter : String {String(name.prefix(1))}
-    var decadeAdmitted : String {String(admissionYear - admissionYear%10)}
+    var decadeAdmitted : String  {String(admissionYear - admissionYear%10)}
+    var empty : String {""}  // for no sectioning
 }
 
 
