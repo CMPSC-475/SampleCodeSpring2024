@@ -6,19 +6,6 @@
         "reference" : "systemIndigoColor"
       },
       "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "color" : {
-        "platform" : "universal",
-        "reference" : "systemGreenColor"
-      },
-      "idiom" : "universal"
     }
   ],
   "info" : {
