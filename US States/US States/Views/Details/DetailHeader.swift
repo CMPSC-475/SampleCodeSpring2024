@@ -21,13 +21,12 @@ struct DetailHeader: View {
     var body : some View {
         HStack(alignment: .center) {
             Text("Founded: \(manager.formatted(year: theState.admissionYear))")
+            Spacer()
             Button {
                 homeStateId = theState.id
             } label: {
                 Image(systemName: isFilled ? "house.fill" : "house")
             }
-
-            Spacer()
             FeatureButton(value: $theState.visited, iconName: Icons.visited, property: property )
             FeatureButton(value: $theState.favorite, iconName: Icons.favorite, property: property)
         }

@@ -13,9 +13,17 @@ struct HomeStateView: View {
         theState.images.isEmpty ? theState.name : theState.images[0]
     }
     var body: some View {
-        Image(imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+        VStack {
+            HStack {
+                Text("My Home State")
+                    .font(.title)
+                    .bold()
+                Spacer()
+            }
+            Image(imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        }
     }
 }
 

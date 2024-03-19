@@ -13,7 +13,12 @@ struct CategoryView: View {
     var body: some View {
         @Bindable var manager = manager
         VStack {
-            Text("\(category.title)")
+            HStack {
+                Text("\(category.title)")
+                    .bold()
+                    .font(.title2)
+                Spacer()
+            }
             ScrollView(.horizontal) {
                 HStack {
                     ForEach($manager.theStates) { $theState in
@@ -21,9 +26,7 @@ struct CategoryView: View {
                             NavigationLink {
                                 StateDetailView(theState: $theState, property: {category.property(theState)})
                             } label: {
-                                Image(theState.name)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+                                StateCardView(theState: theState)
                             }
 
                             
@@ -37,6 +40,7 @@ struct CategoryView: View {
     }
 }
 
-//#Preview {
-//    CategoryView()
-//}
+#Preview {
+    CategoryView(category: Category(title: "All States", property: {_ in true}))
+        .environment(StatesManager())
+}
