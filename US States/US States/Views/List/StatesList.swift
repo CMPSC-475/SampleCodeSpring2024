@@ -23,18 +23,7 @@ struct StatesList: View {
             
             List {
                 ForEach(manager.sectionInfo(for: sectioning)) {sectionInfo in
-                    Section {
-                        ForEach($manager.theStates) { $aState in
-                            if(sectionInfo.identifiers.contains(aState.id)) {
-                                NavigationLink(destination: StateDetailView(theState: $aState, property: {sectionInfo.identifiers.contains(aState.id)})) {
-                                    StateRow(theState: aState)
-                                }
-                            }
-                        }
-                        
-                    } header : {
-                        Text(sectionInfo.title)
-                    }
+                    SectionView(sectionInfo: sectionInfo, hasDivider:true) {StateRow(theState: $0)}
                     
                 }
             }

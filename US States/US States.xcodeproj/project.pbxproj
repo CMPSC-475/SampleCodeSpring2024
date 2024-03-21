@@ -21,6 +21,11 @@
 		C38970EC2BA9F53D00227DC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38970EB2BA9F53D00227DC3 /* HomeView.swift */; };
 		C38970EE2BA9F60600227DC3 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38970ED2BA9F60600227DC3 /* CategoryView.swift */; };
 		C38970F22BAA252000227DC3 /* StateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38970F12BAA252000227DC3 /* StateCardView.swift */; };
+		C38971022BAC977900227DC3 /* EasySplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38971012BAC977900227DC3 /* EasySplitView.swift */; };
+		C38971042BAC985600227DC3 /* TripleSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38971032BAC985600227DC3 /* TripleSplitView.swift */; };
+		C38971062BAC9B8700227DC3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38971052BAC9B8700227DC3 /* RootView.swift */; };
+		C38971082BAC9E6100227DC3 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38971072BAC9E6100227DC3 /* GridView.swift */; };
+		C389710A2BACA1DC00227DC3 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38971092BACA1DC00227DC3 /* SectionView.swift */; };
 		C3D8E56C2BA251C100F5EAEC /* StateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E56B2BA251C100F5EAEC /* StateRow.swift */; };
 		C3D8E56F2BA2521100F5EAEC /* StateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E56E2BA2521100F5EAEC /* StateDetailView.swift */; };
 		C3D8E5712BA2524200F5EAEC /* DetailBird.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8E5702BA2524200F5EAEC /* DetailBird.swift */; };
@@ -48,6 +53,11 @@
 		C38970EB2BA9F53D00227DC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C38970ED2BA9F60600227DC3 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		C38970F12BAA252000227DC3 /* StateCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCardView.swift; sourceTree = "<group>"; };
+		C38971012BAC977900227DC3 /* EasySplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySplitView.swift; sourceTree = "<group>"; };
+		C38971032BAC985600227DC3 /* TripleSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripleSplitView.swift; sourceTree = "<group>"; };
+		C38971052BAC9B8700227DC3 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		C38971072BAC9E6100227DC3 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		C38971092BACA1DC00227DC3 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		C3D8E56B2BA251C100F5EAEC /* StateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRow.swift; sourceTree = "<group>"; };
 		C3D8E56E2BA2521100F5EAEC /* StateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailView.swift; sourceTree = "<group>"; };
 		C3D8E5702BA2524200F5EAEC /* DetailBird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBird.swift; sourceTree = "<group>"; };
@@ -135,6 +145,7 @@
 				C38970EF2BAA24C200227DC3 /* List */,
 				C3D8E56D2BA251FB00F5EAEC /* Details */,
 				C33A7D862BA9AE78007C093A /* Constants.swift */,
+				C38971052BAC9B8700227DC3 /* RootView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +156,10 @@
 				C3D8E57C2BA2536900F5EAEC /* SectionPicker.swift */,
 				C3D8E56B2BA251C100F5EAEC /* StateRow.swift */,
 				C31001932B9FBEE00034B0C0 /* StatesList.swift */,
+				C38971012BAC977900227DC3 /* EasySplitView.swift */,
+				C38971032BAC985600227DC3 /* TripleSplitView.swift */,
+				C38971072BAC9E6100227DC3 /* GridView.swift */,
+				C38971092BACA1DC00227DC3 /* SectionView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -244,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C31001A32B9FBF3D0034B0C0 /* USState.swift in Sources */,
+				C38971062BAC9B8700227DC3 /* RootView.swift in Sources */,
 				C3D8E5732BA2525600F5EAEC /* DetailHeader.swift in Sources */,
 				C38970EA2BA9F2F000227DC3 /* HomeStateView.swift in Sources */,
 				C3D8E57B2BA2531000F5EAEC /* Sectioning.swift in Sources */,
@@ -252,16 +268,20 @@
 				C31001A92B9FBFB00034B0C0 /* StatesManager.swift in Sources */,
 				C33A7D872BA9AE78007C093A /* Constants.swift in Sources */,
 				C3D8E56F2BA2521100F5EAEC /* StateDetailView.swift in Sources */,
+				C38971082BAC9E6100227DC3 /* GridView.swift in Sources */,
 				C33A7D9B2BA9E459007C093A /* Category.swift in Sources */,
+				C389710A2BACA1DC00227DC3 /* SectionView.swift in Sources */,
 				C38970EC2BA9F53D00227DC3 /* HomeView.swift in Sources */,
 				C31001A72B9FBF940034B0C0 /* Persistence.swift in Sources */,
 				C38970F22BAA252000227DC3 /* StateCardView.swift in Sources */,
 				C31001942B9FBEE00034B0C0 /* StatesList.swift in Sources */,
 				C3D8E5792BA252F500F5EAEC /* StateManager+Sectioning.swift in Sources */,
+				C38971042BAC985600227DC3 /* TripleSplitView.swift in Sources */,
 				C3D8E56C2BA251C100F5EAEC /* StateRow.swift in Sources */,
 				C3D8E5772BA2528A00F5EAEC /* FeatureButton.swift in Sources */,
 				C31001922B9FBEE00034B0C0 /* US_StatesApp.swift in Sources */,
 				C3D8E5752BA2527100F5EAEC /* DetailImages.swift in Sources */,
+				C38971022BAC977900227DC3 /* EasySplitView.swift in Sources */,
 				C3D8E5712BA2524200F5EAEC /* DetailBird.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

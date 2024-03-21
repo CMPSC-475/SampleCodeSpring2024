@@ -13,7 +13,7 @@ enum Sectioning: String, CaseIterable, Codable {
          byDecade = "By Decade"
 }
 
-struct SectionInfo : Identifiable {
+struct SectionInfo : Identifiable, Hashable {
     let title : String  // title for section
     let identifiers : Set<String>  // states for section
     var id : String {title}
