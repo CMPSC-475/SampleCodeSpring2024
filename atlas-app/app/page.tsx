@@ -5,27 +5,12 @@ import { HStack, VStack, Text } from "@chakra-ui/react";
 import FlightsTable from "@/components/FlightsTable";
 import AtlasLogo from "@/public/atlas_logo.png";
 import Navbar from "@/components/Navbar"
+import { useFlights } from "@/hooks/useFlights";
 
 export default function Home() {
 
-  const mockData = [
-    {
-        id: 1,
-        name: 'NL1234',
-        origin: 'JFK',
-        destination: 'LAX',
-        departure: '10:00',
-        arrival: '13:00'
-    },
-    {
-        id: 2,
-        name: 'NL1234',
-        origin: 'LAX',
-        destination: 'JFK',
-        departure: '14:00',
-        arrival: '17:00'
-    }
-  ]
+  const {flights} = useFlights()
+
 
   return (
     <VStack backgroundColor={"blue.100"} spacing={0}>
@@ -42,7 +27,7 @@ export default function Home() {
         <Text fontSize={"2xl"} fontWeight={"bold"} color={"black"}>
           Book your flight today
         </Text>
-      <FlightsTable flights={mockData}/>
+      <FlightsTable flights={flights}/>
       </VStack>
     </VStack>
   );
