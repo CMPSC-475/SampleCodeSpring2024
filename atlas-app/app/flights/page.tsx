@@ -13,19 +13,14 @@ import {
 
   import { VStack, Button } from '@chakra-ui/react'
 
+  import { Flight } from '../../Models/Flight'
+
 
 interface FlightsProps {
     flights: Flight[]
 }
 
-interface Flight {
-    id: number
-    name: string
-    origin: string
-    destination: string
-    departure: string
-    arrival: string
-}
+
 
 
 export default function Flights (props : FlightsProps) {
