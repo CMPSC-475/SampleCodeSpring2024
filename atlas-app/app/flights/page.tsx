@@ -50,7 +50,6 @@ export default function Flights (props : FlightsProps) {
         <VStack>
         <TableContainer>
             <Table variant='simple'>
-                <TableCaption>{Date().toString()}</TableCaption>
                 <Thead>
                 <Tr>
                     <Th>Flight Number</Th>

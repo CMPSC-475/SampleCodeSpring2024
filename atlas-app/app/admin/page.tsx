@@ -5,12 +5,13 @@ import { Flight } from "@/Models/Flight"
 import { Input, Button } from "@chakra-ui/react"
 import React from "react"
 import FlightsTable from "@/components/FlightsTable"
+import { addFlight } from "../api/AtlasAPI"
 
 
 
 // admin page where user can add a flight
 export default function Admin() {
-    const {flights, addFlight} = useFlights()
+    const {flights} = useFlights()
 
     return (
         <VStack>

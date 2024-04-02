@@ -1,7 +1,7 @@
 "use client"
 import { Flight } from "@/Models/Flight";
+import { getFlights } from "@/app/api/AtlasAPI";
 import { createContext, useContext, useState, ReactNode, useEffect } from "react";
-import { setFlagsFromString } from "v8";
 
 
 interface FlightsContextType {
@@ -18,12 +18,19 @@ export function FlightsProvider({children} : {children : ReactNode}) {
     useEffect(() => {
         //TODO: Invoke API for flights
 
-        if (typeof window !== 'undefined') {
-            let flightsData = localStorage.getItem('flights')
-            if (flightsData) {
-                setFlights(JSON.parse(flightsData))
-            }
-        }
+        
+            getFlights()
+                .then((flights) => {
+                    setFlights(flights)
+                })
+
+
+        // if (typeof window !== 'undefined') {
+        //     let flightsData = localStorage.getItem('flights')
+        //     if (flightsData) {
+        //         setFlights(JSON.parse(flightsData))
+        //     }
+        // }
     }, [])
 
 
