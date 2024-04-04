@@ -22,3 +22,12 @@ export async function addFlight(flight: Flight) {
     return response.json()
 }
 
+
+export async function getBookedFlights() {
+    const response = await fetch(`${API_URL}/booked-flights`)
+    let apiResponse = await response.json()
+
+    // Typically remapping model from api to client api
+    return apiResponse
+}
+

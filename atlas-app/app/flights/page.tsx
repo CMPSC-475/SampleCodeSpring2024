@@ -14,6 +14,10 @@ import {
   import { VStack, Button } from '@chakra-ui/react'
 
   import { Flight } from '../../Models/Flight'
+import { use } from 'react'
+
+import { useFlights } from '../../hooks/useFlights'
+import FlightsTable from '../../components/FlightsTable'
 
 
 interface FlightsProps {
@@ -25,67 +29,10 @@ interface FlightsProps {
 
 export default function Flights (props : FlightsProps) {
 
-    const mockData = [
-        {
-            id: 1,
-            name: 'NL1234',
-            origin: 'JFK',
-            destination: 'LAX',
-            departure: '10:00',
-            arrival: '13:00'
-        },
-        {
-            id: 2,
-            name: 'NL1234',
-            origin: 'LAX',
-            destination: 'JFK',
-            departure: '14:00',
-            arrival: '17:00'
-        }
-    ]
+    const {flights} = useFlights()
 
 
     return (
-
-        <VStack>
-        <TableContainer>
-            <Table variant='simple'>
-                <Thead>
-                <Tr>
-                    <Th>Flight Number</Th>
-                    <Th>Departure </Th>
-                    <Th>Origin </Th>
-                    <Th>Destination </Th>
-                    <Th>Arrival</Th>
-                    <Th></Th>
-                </Tr>
-                </Thead>
-                <Tbody>
-
-                {
-                    mockData.map((flight) => (
-                        <Tr key={flight.id}>
-                            <Td>{flight.name}</Td>
-                            <Td>{flight.departure}</Td>
-                            <Td>{flight.origin}</Td>
-                            <Td>{flight.destination}</Td>
-                            <Td>{flight.arrival}</Td>
-                            <Td> <Button> BOOK</Button></Td>
-                        </Tr>
-                    ))
-                }
-                </Tbody>
-                <Tfoot>
-                <Tr>
-                    <Th>Flight Number</Th>
-                    <Th>Departure </Th>
-                    <Th>Origin </Th>
-                    <Th>Destination </Th>
-                    <Th>Arrival</Th>
-                </Tr>
-                </Tfoot>
-            </Table>
-            </TableContainer>
-        </VStack>
+        <FlightsTable flights={flights}/>
     )
 }

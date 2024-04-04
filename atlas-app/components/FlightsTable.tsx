@@ -17,17 +17,19 @@ export default function FlightsTable({flights}: FlightsTableProps) {
                     <Th>Origin </Th>
                     <Th>Destination </Th>
                     <Th>Arrival</Th>
+                    <Th>Price</Th>
                 </Tr>
             </Thead>
             <Tbody>
                 {
                     flights.map(f => (
                         <Tr key={f.id}>
-                            <Td>{f.name}</Td>
+                            <Td>{f.flight_id}</Td>
                             <Td>{f.departure}</Td>
                             <Td>{f.origin}</Td>
                             <Td>{f.destination}</Td>
                             <Td>{f.arrival}</Td>
+                            <Td>{f.price} USD</Td>
                         </Tr>
                     ))
                 }
