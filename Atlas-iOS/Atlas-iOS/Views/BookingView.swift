@@ -19,7 +19,7 @@ struct BookingView: View {
             TextField("name", text: $passengerName)
             TextField("email", text: $passengerEmail)
             Button {
-                //manager.bookFlight(booking: BookFlight(flight_id: flight.id, passengerName: passengerName, passegnerEmail: passengerEmail))
+                manager.bookFlight(booking: BookFlight(flight_id: flight.id, passengerName: passengerName, passegnerEmail: passengerEmail))
             } label: {
                 Text("Book Flight")
             }

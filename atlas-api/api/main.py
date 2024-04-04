@@ -89,7 +89,7 @@ flights_db = [
 booked_flights_db = []
 
 
-@app.get("/flights", response_model=List[Flight])
+@app.get("/flights")
 def get_flights():
     return flights_db
 

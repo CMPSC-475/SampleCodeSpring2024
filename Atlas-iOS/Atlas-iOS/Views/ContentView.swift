@@ -29,6 +29,20 @@ struct ContentView: View {
             }
             .onAppear {
                 //TODO: Fetch flights
+                Task {
+                    var _flights : [Flight] = []
+                    _flights = try await manager.getFlights()
+                    DispatchQueue.main.async {
+                        flights = _flights
+                    }
+                    
+                }
+                
+                
+//                manager.fetchFlights { flights, error in
+//                    print(error?.localizedDescription)
+//                    self.flights = flights!
+//                }
             }
             .padding()
         }

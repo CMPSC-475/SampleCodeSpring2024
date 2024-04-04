@@ -38,8 +38,8 @@ export default function Admin() {
                         bookedFlights.map((bookedFlight) => {
                             return (
                                 <HStack>
-                                    <Text>{bookedFlight.flight_id}</Text>
-                                    <Text>{bookedFlight.passenger_email}</Text>
+                                    <Text>{bookedFlight.flight_id} | </Text>
+                                    <Text>{bookedFlight.passenger_email} | </Text>
                                     <Text>{bookedFlight.passenger_name}</Text>
                                 </HStack>
                             )
